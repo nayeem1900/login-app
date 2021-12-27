@@ -64,12 +64,12 @@ class FrontendController extends Controller
 
     //Get Subcategory With Ajax
 
-    public function getIbchDoctor($ibchd_id){
+    /*public function getIbchDoctor($ibchd_id){
 
         $subcat=Ibchk::where('ibchkdep_id',$ibchd_id)->orderBy('name','ASC')->get();
 
         return json_encode($subcat);
-    }
+    }*/
 
 
     public function ibch(){

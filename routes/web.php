@@ -31,7 +31,7 @@ Route::get('/hospital_committee',[FrontendController::class,'hospitalcommittee']
 Route::get('/community_hospital_board',[FrontendController::class,'communityhospitalboard'])->name('communityhospitalboard');
 Route::get('/education_committee',[FrontendController::class,'educationcommittee'])->name('educationcommittee');
 Route::get('/community_hospital_committee',[FrontendController::class,'communityhospitalcommittee'])->name('communityhospitalcommittee');
-Route::get('ibchkdoctor/ajax/{ibchd_id}',[FrontendController::class,'getIbchDoctor'])->name('ajax-doctor');
+/*Route::get('ibchkdoctor/ajax/{ibchd_id}',[FrontendController::class,'getIbchDoctor'])->name('ajax-doctor');*/
 //Bank_Hospital
 Route::get('ibch',[FrontendController::class,'ibch'])->name('ibch');
 
@@ -103,7 +103,7 @@ Route::group(['prefix'=>'ibchkdep','middleware'=>['admin','auth','permission']],
     Route::get('/ibchkdoctor/edit/{id}',[IbchkConrtoller::class,'ibchkdoctoredit'])->name('ibchk.doctor.edit');
     Route::post('/ibchkdoctor/update/{id}',[IbchkConrtoller::class,'ibchkdoctorupdate'])->name('ibchk.doctor.update');
     Route::post('/ibchkdoctor/delete/{id}',[IbchkConrtoller::class,'ibchkdoctordelete'])->name('ibchk.doctor.delete');
-    Route::get('ibchkdoctor/ajax/{ibchd_id}',[IbchkConrtoller::class,'getIbchDoctor'])->name('ajax-doctor');
+    Route::get('ibchkdoctor/ajax/',[IbchkConrtoller::class,'getIbchDoctor'])->name('ajax-doctor');
 });
 
 

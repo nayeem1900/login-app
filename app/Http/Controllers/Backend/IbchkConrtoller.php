@@ -147,11 +147,11 @@ public function ibchkdoctorupdate(Request $request,$id){
 
     //Get Subcategory With Ajax
 
-    public function getIbchDoctor($ibchd_id){
+    public function getIbchDoctor(Request $request){
 
-        $subcat=Ibchk::where('ibchkdep_id',$ibchd_id)->orderBy('name','ASC')->get();
-
-        return json_encode($subcat);
+        $ibchkdep_id=$request->ibchkdep_id;
+$allIbchkDoctor=Ibchk::where('ibchkdep_id',$ibchkdep_id)->get();
+    return response()->json($allIbchkDoctor);
     }
 
 

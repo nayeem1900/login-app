@@ -13,7 +13,7 @@
 
         <div class="col-md-3">
             <label class="form-control-label">Select Department: <span class="tx-danger">*</span></label>
-            <select class="form-control select2-show-search" data-placeholder="Select Category" name="ibchk_id">
+            <select class="form-control select2-show-search" data-placeholder="Select Category" name="" id="ibchkdep_id">
                 <option value="">Select Department</option>
                 @foreach($allData as $ibchdep)
                     <option value="{{$ibchdep->id}}">{{$ibchdep->name}} </option>
@@ -34,12 +34,18 @@
 
         </div>
 
+        <div class="col-md-3">
+            <textarea></textarea>
+
+        </div>
+
         <div class="form-group col-md-3" style="padding-top:29px;">
 
             <a id="search"class="btn btn-primary btn-sm" name="search">Search</a>
         </div>
 
     </div>
+    <br>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">Contact Us</h5>
@@ -57,7 +63,40 @@
 <script src="{{asset('backend/select2')}}"></script>
 <script src="{{asset('backend/js/jquery-2.2.4.min.js')}}"></script>
 
+
 <script type="text/javascript">
+$(function(){
+
+   $(document).on('change','#ibchkdep_id',function () {
+var ibchkdep_id=$(this).val();
+$.ajax({
+
+type:"GET",
+  url:"{{route('ajax-doctor')}}",
+    data:{ibchkdep_id:ibchkdep_id},
+    success:function (data){
+
+      var html='<option value="">Select Doctor</option>'
+        $.each(data,function (key,v) {
+            html+='<option value="'+v.id+'">'+v.name+'</option>';
+        });
+$('#ibchk_id').html(html);
+
+    }
+        
+
+});
+
+   });
+
+});
+
+</script>
+
+
+
+
+{{--<script type="text/javascript">
     $(document).ready(function() {
         $('select[name="ibchkdep_id"]').on('change', function(){
             var ibchkdep_id = $(this).val();
@@ -87,6 +126,6 @@
 
     });
 
-</script>
+</script>--}}
 
   @endsection
