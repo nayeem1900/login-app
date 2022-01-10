@@ -36,7 +36,7 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <h3>Year List
+                                <h3>Department List
 
                                     <a class="btn btn-success float-right btn-sm" href="{{route('ibchk.dept.add')}}"><i class="fa fa-plus-circle"></i> Add Department</a>
 

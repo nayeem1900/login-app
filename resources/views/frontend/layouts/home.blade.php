@@ -71,7 +71,7 @@
                             Notice
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="">Jakat</a> </li>
+                            <li class="list-group-item"><a href="{{route('jakat')}}">Jakat</a> </li>
 
                         </ul>
                     </div>
@@ -85,7 +85,7 @@
                             News & Events
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="">Hospital-Info</a> </li>
+                            <li class="list-group-item"><a href="{{route('hospital-info')}}">Hospital-Info</a> </li>
                         </ul>
                     </div>
 
@@ -98,12 +98,11 @@
                             Links
                         </div>
                         <ul class="list-group list-group-flush" >
-                            <li class="list-group-item"><a href="http://192.168.88.6:7071/ERP/login/auth">HR</a></li>
-                            <li class="list-group-item"><a href="http://114.129.9.111:8080/accounts/users/login">Accounts</a></li>
-                            <li class="list-group-item"><a href="http://114.129.9.111:8082/PmisReport/">PMIS</a></li>
-                            <li class="list-group-item"><a href="http://114.129.9.111:8081/leave/">Leave</a></li>
+                            <li class="list-group-item"><a href="http://119.18.151.117:7073/ERP/login/auth/">HR</a></li>
+                            <li class="list-group-item"><a href="http://119.18.151.65:8080/accounts">Accounts</a></li>
+                            <li class="list-group-item"><a href="http://119.18.151.65:8082/PmisReport/">PMIS</a></li>
+                            <li class="list-group-item"><a href="http://119.18.151.65:8081/leave">Leave</a></li>
                             <li class="list-group-item"><a href="https://www.islamibankbd.com/">Islami Bank Bangladesh</a> </li>
-
 
                         </ul>
                     </div>

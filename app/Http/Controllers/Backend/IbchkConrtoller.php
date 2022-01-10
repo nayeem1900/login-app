@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class IbchkConrtoller extends Controller
 {
     public function view(){
-        $data['allData']=IbchkDep::all();
+        $data['allData']=IbchkDep::orderBy('id','desc')->get();
         return view('backend.ibchk.view-dept',$data);
     }
 
@@ -150,9 +150,25 @@ public function ibchkdoctorupdate(Request $request,$id){
     public function getIbchDoctor(Request $request){
 
         $ibchkdep_id=$request->ibchkdep_id;
-$allIbchkDoctor=Ibchk::where('ibchkdep_id',$ibchkdep_id)->get();
+
+            $allIbchkDoctor = Ibchk::where('ibchkdep_id', $ibchkdep_id)->get();
+
+
     return response()->json($allIbchkDoctor);
     }
+
+
+
+    //Get Subcategory With Ajax
+
+  /*  public function getIbchDoctor(Request $request){
+
+        $ibchkdep_id=$request->ibchkdep_id;
+        $allIbchkDoctor=Ibchk::where('ibchkdep_id',$ibchkdep_id)->get();
+        return response()->json($allIbchkDoctor);
+    }   */
+
+
 
 
 }

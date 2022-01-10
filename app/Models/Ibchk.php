@@ -8,19 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Ibchk extends Model
 {
     use HasFactory;
-
     protected $guarded=[];
-
-   /* public function ibchkdoctor(){
-
-        return $this->belongsTo('App\Models\IbchkDep');
-    }*/
-
-
     public function ibchkdoctor(){
 
 
         return $this->belongsTo(IbchkDep::class,'ibchkdep_id', 'id');
     }
-
 }

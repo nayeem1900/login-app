@@ -62,7 +62,7 @@
                                         </div>
                                     </div>--}}
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <div class="form-group row">
                                                 <label for="role">Select Department</label>
                                                 <select class="form-control" name="ibchkdep_id" id="ibchkdep_id">
@@ -77,7 +77,7 @@
 
 
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-9">
                                             <table class="table table-bordered">
                                                 <thead>
                                                 <tr>

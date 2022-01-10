@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIbchkDepsTable extends Migration
+class CreateEtendersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateIbchkDepsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ibchk_deps', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->unique();
+        Schema::create('etenders', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->date('t_date')->nullable();
+            $table->date('deadline')->nullable();
+            $table->string('title')->nullable();
+            $table->string('t_download')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
+            $table->tinyInteger('status')->default(1)->comment('0=inactive,1=active');
             $table->timestamps();
         });
     }
@@ -29,6 +33,6 @@ class CreateIbchkDepsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ibchk_deps');
+        Schema::dropIfExists('etenders');
     }
 }

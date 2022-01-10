@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIbchksTable extends Migration
+class CreateIbchkDepsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateIbchksTable extends Migration
      */
     public function up()
     {
-        Schema::create('ibchks', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->nullable();
-            $table->integer('ibchkdep_id')->nullable();
-            $table->string('ibchkdegree')->nullable();
-            $table->string('ibchktime')->nullable();
-            $table->string('image')->nullable();
+        Schema::create('ibchk_deps', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name')->unique();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
 
@@ -34,6 +30,6 @@ class CreateIbchksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ibchks');
+        Schema::dropIfExists('ibchk_deps');
     }
 }

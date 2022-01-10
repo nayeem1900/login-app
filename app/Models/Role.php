@@ -23,5 +23,4 @@ class Role extends Model
 
         return $this->hasOne('App\Models\Permission');
     }
-
 }

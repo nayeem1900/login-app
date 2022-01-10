@@ -39,11 +39,11 @@
                                 Instituions
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li style="background: green" ><hr class="dropdown-divider"><strong style="color: white">Islami Bank Hospital</strong></li>
+                                <li style="background: green;padding-left: 10px" ><hr class="dropdown-divider"><strong style="color: white">Islami Bank Hospital</strong></li>
 
                                 {{--  <p><strong>Islami Bank Hospital</strong></p>--}}
                                 <li><a class="dropdown-item" href="{{route('ibch')}}">Islami Bank Central Hospital</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Motijheel</a></li>
+                                <li><a class="dropdown-item" href="{{route('motijheel')}}">Islami Bank Hospital Motijheel</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Mirpur</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Mughda</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Spetalize Hospital,Nayapalton</a></li>
@@ -51,7 +51,7 @@
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Barishal</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Chottogram</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Luxmipur,Rajshahi</a></li>
-                                <li style="background: green"><hr class="dropdown-divider"><strong>Community Hospital</strong></li>
+                                <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Community Hospital</strong></li>
 
                                 <li><a class="dropdown-item" href="#">Islami Bank Community Hospital, Faridpur Ltd</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Community Hospital,Rangpur Ltd</a></li>
@@ -63,20 +63,20 @@
                                 <li><a class="dropdown-item" href="#">Islami Bank A.R Howlader Community Hospital,Madaripur Ltd</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Community Hospital,Mymensingh Ltd</a></li>
 
-                                <li style="background: green"><hr class="dropdown-divider"><strong>Health Education</strong></li>
+                                <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Health Education</strong></li>
 
                                 <li><a class="dropdown-item" href="#">Islami Bank Medical College Rajsahi</a></li>
                                 <li><a class="dropdown-item" href="http://ibncr.edu.bd/">Islami Bank Nursing College Rajsahi</a></li>
                                 <li><a class="dropdown-item" href="http://ibncb.edu.bd/">Islami Bank Nursing Institute Barisal</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Institute of Health Technology Rajsahi</a></li>
-                                <li style="background: green"><hr class="dropdown-divider"><strong>Generala Education</strong></li>
+                                <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Generala Education</strong></li>
 
                                 <li><a class="dropdown-item" href="http://ibiscdhaka.com">Islami Bank International School & College</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Model School & College</a></li>
 
-                                <li style="background: green"><hr class="dropdown-divider"><strong>Technical Education</strong></li>
+                                <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Technical Education</strong></li>
 
-                                <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Sylhet</a></li>
+                                <li><a class="dropdown-item" href="http://ibitsylhet.edu.bd/">Islami Bank Institute of Technology,Sylhet</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Bogura</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Chattogram</a></li>
                             </ul>
@@ -89,7 +89,7 @@
                             <a class="nav-link" href="#">Media Room</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">E-tender</a>
+                            <a class="nav-link" href="{{route('etender')}}">E-tender</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Forms & Publication</a>
@@ -98,10 +98,10 @@
                             <a class="nav-link" href="#">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Career</a>
+                            <a class="nav-link" href="{{route('career')}}">Career</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Contact Us</a>
+                            <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                         </li>
 
 
