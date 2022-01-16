@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\AssignDoctor;
+use App\Models\Branch;
 use App\Models\Carrier;
 use App\Models\Etender;
 use App\Models\Ibchk;
 use App\Models\IbchkDep;
+use App\Models\IbhDept;
 use App\Models\Logo;
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
@@ -109,15 +113,18 @@ class FrontendController extends Controller
 
     public function ibchDoctor(){
     $data['logo']=Logo::first();
-    $data['ibchkdeps']=IbchkDep::all();
-    $data['allData']=Ibchk::where('ibchkdep_id', '3')->get();
+    $data['departments']=IbhDept::all();
+    $data['branches']=Branch::where('branch_id', '2')->get();
     return view('frontend.pages.ibch_doctor',$data);
 }
 
     public function ibchCard(){
         $data['logo']=Logo::first();
-        $data['ibchkdeps']=IbchkDep::all();
-        $data['allData']=Ibchk::where('ibchkdep_id', '1')->get();
+        $data['departments']=IbhDept::all();
+        /*$data['allData']=AssignDoctor::where('branch_id','3','dep_id','4')->get();*/
+        $data['allData'] = DB::table('ibh_doctors')->get();
+
+
         return view('frontend.pages.ibch-cardiology',$data);
     }
     public function ibchGyno(){
@@ -140,13 +147,43 @@ class FrontendController extends Controller
         $data['allData']=Ibchk::where('ibchkdep_id', '8')->get();
         return view('frontend.pages.ibch-child',$data);
     }
-    public function ibchmedi(){
+    public function ibchmedi(Request $request){
 
-    $data['logo']=Logo::first();
+
+        $data['logo']=Logo::first();
+        $data['branches']=Branch::all();
+        $data['departments']=IbhDept::all();
+        $data['allData']=AssignDoctor::where('branch_id','2')->get();
+
+
+        return view('frontend.pages.ibch-medi',$data);
+        /*
+        $data['ibchkdeps']=IbchkDep::all();
+
+
+        $data['branch_id']=$request->branch_id;
+        $data['dep_id']=$request->dep_id;
+        $data['allData']=AssignDoctor::where('branch_id',$request->branch_id)->where('dep_id',$request->dep_id)->get();*/
+    /*$data['logo']=Logo::first();
     $data['ibchkdeps']=IbchkDep::all();
-    $data['allData']=Ibchk::where('ibchkdep_id', '8')->get();
-    return view('frontend.pages.ibch-medi',$data);
+    $data['allData']=Ibchk::where('ibchkdep_id', '8')->get();*/
+
 }
+
+    public function ibchdoctorview(){
+
+
+
+        $data['logo']=Logo::first();
+        $data['branches']=Branch::orderBy('id', 'asc')->get();
+
+        $data['departments']=IbhDept::all();
+        $data['branch_id']=Branch::orderBy('id','asc')->first()->id;
+        $data['dep_id']=IbhDept::orderBy('id','asc')->first()->id;
+        $data['allData']=AssignDoctor::where('branch_id','2')->where('dep_id',$data['dep_id'])->get();
+        return view('frontend.pages.central-hospital-doctor',$data);
+    }
+
     public function chestMedi(){
 
         $data['logo']=Logo::first();

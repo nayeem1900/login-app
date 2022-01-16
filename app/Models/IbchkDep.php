@@ -10,10 +10,10 @@ class IbchkDep extends Model
     use HasFactory;
     protected $guarded=[];
 
-    use HasFactory;
 
-    public function ibchk(){
+
+  /*  public function ibchk(){
 
         return $this->hasOne('App\Models\Ibchk');
-    }
+    }*/
 }

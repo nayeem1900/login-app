@@ -13,6 +13,11 @@ use App\Http\Controllers\Backend\IbchkConrtoller;
 use App\Http\Controllers\Backend\MotijheelController;
 use App\Http\Controllers\Backend\EtenderController;
 use App\Http\Controllers\Backend\CarrierController;
+use App\Http\Controllers\Backend\BranchController;
+use App\Http\Controllers\Backend\IbhdeptController;
+use App\Http\Controllers\Backend\AssigndoctorController;
+use App\Http\Controllers\Backend\DoctorregController;
+use App\Http\Controllers\Backend\DefaultController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -164,7 +169,62 @@ Route::group(['prefix'=>'motijheeldep','middleware'=>['admin','auth','permission
 
 });
 
+///Branch
+Route::group(['prefix'=>'branch','middleware'=>['admin','auth','permission']],function () {
 
+    Route::get('/view',[BranchController::class,'view'])->name('branch.view');
+    Route::get('/add',[BranchController::class,'add'])->name('branch.add');
+    Route::post('/store',[BranchController::class,'store'])->name('branch.store');
+    Route::get('/edit/{id},',[BranchController::class,'edit'])->name('branch.edit');
+    Route::post('/update/{id},',[BranchController::class,'update'])->name('branch.update');
+    Route::post('/delete/{id},',[BranchController::class,'delete'])->name('branch.delete');
+
+});
+//Department
+
+Route::group(['prefix'=>'department','middleware'=>['admin','auth','permission']],function () {
+
+    Route::get('/view',[IbhdeptController::class,'view'])->name('dep.view');
+    Route::get('/add',[IbhdeptController::class,'add'])->name('dep.add');
+    Route::post('/store',[IbhdeptController::class,'store'])->name('dep.store');
+    Route::get('/edit/{id},',[IbhdeptController::class,'edit'])->name('dep.edit');
+    Route::post('/update/{id},',[IbhdeptController::class,'update'])->name('dep.update');
+    Route::post('/delete/{id},',[IbhdeptController::class,'delete'])->name('dep.delete');
+
+
+});
+
+//Assign Doctor
+
+
+Route::group(['prefix'=>'assigndoctor','middleware'=>['admin','auth','permission']],function () {
+    Route::get('/view1',[AssigndoctorController::class,'view1'])->name('assign.doctor.view1');
+    Route::get('/view',[AssigndoctorController::class,'view'])->name('assign.doctor.view');
+    Route::get('/add',[AssigndoctorController::class,'add'])->name('assign.doctor.add');
+    Route::post('/store',[AssigndoctorController::class,'store'])->name('assign.doctor.store');
+    Route::get('/edit/{branch_id},',[AssigndoctorController::class,'edit'])->name('assign.doctor.edit');
+    Route::post('/update/{branch_id},',[AssigndoctorController::class,'update'])->name('assign.doctor.update');
+    Route::post('/delete/{id},',[AssigndoctorController::class,'delete'])->name('assign.doctor.delete');
+    Route::post('/assign/department/details/{branch_id},',[IbhdeptController::class,'details'])->name('assign.doctor.department.details');
+
+
+});
+
+//Doctor Registration
+Route::group(['prefix'=>'doctor','middleware'=>['admin','auth','permission']],function () {
+    Route::get('/reg/view',[DoctorregController::class,'view'])->name('doctor.registration.view');
+    Route::get('/reg/add',[DoctorregController::class,'add'])->name('doctor.registration.add');
+    Route::post('reg/store',[DoctorregController::class,'store'])->name('doctor.registration.store');
+    Route::get('/reg/edit/{doctor_id}',[DoctorregController::class,'edit'])->name('doctor.registration.edit');
+    Route::post('/reg/update/{doctor_id}',[DoctorregController::class,'update'])->name('doctor.registration.update');
+    Route::get('/branch-dept-wise',[DoctorregController::class,'BranchDeptWise'])->name('doctor.branch.dept.wise');
+    Route::get('/reg/details/{doctor_id}',[DoctorregController::class,'details'])->name('doctor.registration.details');
+
+    Route::get('/ibch/doctor/view/',[DoctorregController::class,'ibchDoctor'])->name('dep.ibch.doctor.details');
+
+});
+
+Route::get('/get-doctor',[DefaultController::class,'getDoctor'])->name('get-student');
 
 
 /*Route::group(['middleware'=>'admin','auth'],function () {

@@ -94,7 +94,7 @@
                     <tr>
 
                         <td>{{$key+1}}</td>
-                        <td>{{$value['ibchkdoctor']['name']}}</td>
+                        <td>{{$value['doctor']['name']}}</td>
                         <td>{{($value->name)}}</td>
                         <td>{{($value->ibchkdegree)}}</td>
                         <td>{{($value->ibchktime)}}</td>

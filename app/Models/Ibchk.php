@@ -9,9 +9,9 @@ class Ibchk extends Model
 {
     use HasFactory;
     protected $guarded=[];
-    public function ibchkdoctor(){
+    /*public function ibchkdoctor(){
 
 
         return $this->belongsTo(IbchkDep::class,'ibchkdep_id', 'id');
-    }
+    }*/
 }

@@ -249,6 +249,74 @@ $route=Route::current()->getName();
         </li>
         @endisset
 
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    Branch
+                    <i class="fas fa-angle-left right"></i>
+
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('branch.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>View Branch</p>
+                    </a>
+                </li>
+
+
+            </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    Department
+                    <i class="fas fa-angle-left right"></i>
+
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('dep.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>View Department</p>
+                    </a>
+                </li>
+
+
+            </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    Assign Doctor
+                    <i class="fas fa-angle-left right"></i>
+
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('assign.doctor.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Assign Doctor</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('doctor.registration.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Assign Doctor1</p>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
        {{-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>

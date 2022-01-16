@@ -32,7 +32,7 @@
         <p style="text-align: justify">Islami Bank Central Hospital Kakrail is a largest and fast growing Hospital in Dhaka. The Hospital has founded  13 April 1993. It is a 135 beded hospital. We believe the Hospital will go ahead as a pioneer private Hospital in Dhaka.The Hospital operates its daily activities of the own building. There are three building in Hospitalt.  It has 06 operation theaters including 01 Eye OT. There are also 05 preoperative and 06 post operative room. There have Modern ICU  that leaded by famous and expert  Consulant and medical related people. </p>
 
 
-        <div class="row">
+       {{-- <div class="row">
 
             <div class="col-md-3">
                 <label class="form-control-label">Select Department</label>
@@ -58,14 +58,14 @@
             </div>
 
 
-            {{--<div class="form-group col-md-3" style="padding-top:29px;">
+            --}}{{--<div class="form-group col-md-3" style="padding-top:29px;">
 
                 <a id="search"class="btn btn-primary btn-sm" name="search">Search</a>
-            </div>--}}
+            </div>--}}{{--
 
 
 
-        </div>
+        </div>--}}
 
         <br>
         <div class="row">
@@ -82,11 +82,12 @@
                     <thead>
                     <tr>
                         <th scope="col"style="width: 10%;">Serial No</th>
-                        <th scope="col">Department</th>
-                        <th scope="col"style="width: 15%;">Doctor Name</th>
-                        <th scope="col"style="width: 20%;">Doctor Degree</th>
-                        <th scope="col"style="width: 30%;">Doctor Sechedule</th>
-                        <th scope="col" >Doctor Picture</th>
+                        <th scope="col">Doctor Name</th>
+                        <th scope="col"style="width: 15%;">Doctor Degree</th>
+                        <th scope="col"style="width: 20%;">Doctor Schedule</th>
+                        <th scope="col"style="width: 30%;">Doctor Picture</th>
+                        <th scope="col"style="width: 30%;">Department</th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -94,11 +95,15 @@
                         <tr>
 
                             <td>{{$key+1}}</td>
-                            <td>{{$value['ibchkdoctor']['name']}}</td>
-                            <td>{{($value->name)}}</td>
-                            <td>{{($value->ibchkdegree)}}</td>
-                            <td>{{($value->ibchktime)}}</td>
-                            <td><img src="{{(!empty($value->image))?url('upload/doctor_images/'.$value->image):url('upload/no_img.png')}}"style="width: 150px" height="160px"></td>
+                            <td>{{$value['doctor']['doctor_name']}}</td>
+                            <td>{{$value['doctor']['degree']}}</td>
+                            <td>{{$value['doctor']['schedule']}}</td>
+
+                          <td><img src="{{asset('upload/doctor_images/'.$value['doctor']['img'])}}" style="width: 150px" height="160px"> </td>
+                            <td>{{$value['department']['name']}}</td>
+
+                          {{--  <td><img src="{{(!empty($value->img))?url('upload/doctor_images/'.$value['doctor']['img'])}}"style="width: 150px" height="160px"></td>--}}
+                            {{--<td><img src="{{(!empty($value->image))?url('upload/doctor_images/'.$value->image):url('upload/no_img.png')}}"style="width: 150px" height="160px"></td>--}}
 
 
                             @endforeach
