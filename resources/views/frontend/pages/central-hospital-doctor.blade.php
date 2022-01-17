@@ -1,3 +1,4 @@
+
 @extends('frontend.layouts.master')
 @section('content')
     <div class="container">
@@ -37,118 +38,71 @@
 
 
         <div class="card-body">
-            @if(!@$search)
 
-                <table id="example1" class="table table-bordered table-hover">
 
-                    <thead>
+
+            <table id="example1" class="table table-bordered table-hover">
+
+                <thead>
+                <tr>
+                    <th width="7%">SL</th>
+                    <th>Name</th>
+                    <th>Degree</th>
+                    <th>Schedule</th>
+                    <th>Branch</th>
+                    <th>Department</th>
+                    <th>Image</th>
+
+
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($doctor as $key=> $value)
                     <tr>
-                        <th width="7%">SL</th>
-                        <th>Name</th>
-                        <th>Degree</th>
-                        <th>Schedule</th>
-                        <th>Branch</th>
-                        <th>Department</th>
-                        <th>Image</th>
+                        <td>{{$key+1}}</td>
+
+                        <td>{{$value->doctor_name}}</td>
+                        <td>{{$value->degree}}</td>
+
+                        <td>{{$value->schedule}}</td>
+                        <td>{{$value['branch']['name']}}</td>
+                        <td>{{$value['department']['name']}}</td>
+
+
+
+                        <td>
+{{--                             <img  src="{{(!empty($value['doctor']['img']))?url('upload/doctor_images/'.$value['doctor']['img']):url('upload/no_img.png')}}" style="width:70px;height:80px;border:1px solid#000;">--}}
+                            <img  src="{{(!empty($value->img))?url('upload/doctor_images/'.$value->img):url('upload/no_img.png')}}" style="width:70px;height:80px;border:1px solid#000;">
+                        </td>
+
+
 
 
                     </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($allData as $key=>$value)
-                        <tr>
-                            <td>{{$key+1}}</td>
-                            <td>{{$value['doctor']['doctor_name']}}</td>
-                            <td>{{$value['doctor']['degree']}}</td>
-                            <td>{{$value['doctor']['schedule']}}</td>
+                @endforeach
 
-                            <td>{{$value['branch']['name']}}</td>
-                            <td>{{$value['department']['name']}}</td>
 
-                            <td>
-                                <img  src="{{(!empty($value['doctor']['img']))?url('upload/doctor_images/'.$value['doctor']['img']):url('upload/no_img.png')}}" style="width:70px;height:80px;border:1px solid#000;">
-
-                            </td>
+                </tbody>
 
 
 
+            </table>
 
-                        </tr>
-                    @endforeach
-
-
-                    </tbody>
-
-
-
-                </table>
-
-            @else
-                <table id="example1" class="table table-bordered table-hover">
-
-                    <thead>
-                    <tr>
-                        <th width="7%">SL</th>
-                        <th>Name</th>
-                        <th>Degree</th>
-                        <th>Schedule</th>
-                        <th>Branch</th>
-                        <th>Department</th>
-                        <th>Image</th>
-
-                        <th width="14%">Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($allData as $key=>$value)
-                        <tr>
-                            <td>{{$key+1}}</td>
-                            <td>{{$value['doctor']['doctor_name']}}</td>
-                            <td>{{$value['doctor']['degree']}}</td>
-                            <td>{{$value['doctor']['schedule']}}</td>
-                            <td>{{$value['branch']['name']}}</td>
-                            <td>{{$value['department']['name']}}</td>
-
-                            <td>
-                                <img  src="{{(!empty($value['doctor']['img']))?url('upload/doctor_images/'.$value['doctor']['img']):url('upload/no_img.png')}}" style="width:70px;height:80px;border:1px solid#000;">
-
-                            </td>
-                            <td>{{($value->dep_id)}}</td>
-                            <td>{{($value->branch_id)}}</td>
-
-                            <td>
-                                <a title="Edit" class="btn btn-sm btn-primary" href="{{route('doctor.registration.edit',$value->doctor_id)}}"><i class="fa fa-edit"></i></a>
-
-                                <a target="_blank" title="Details" class="btn btn-sm btn-info" href="{{route('doctor.registration.details',$value->doctor_id)}}"><i class="fa fa-eye"></i></a>
-
-
-
-                            </td>
-
-                        </tr>
-                    @endforeach
-
-
-                    </tbody>
-
-
-
-                </table>
-            @endif
 
         </div>
 
 
+
         <div class="row">
 
-            <ul>
+           {{-- <ul>
                 <h1>Islami Bank Hospital Doctors Department</h1>
                 @foreach($departments as $key=>$value)
-                    {{--<td>{{$value['doctor']['doctor_name']}}</td>--}}
+                    --}}{{--<td>{{$value['doctor']['doctor_name']}}</td>--}}{{--
                     <li>{{$value->name}}</li>
 
                 @endforeach
-            </ul>
+            </ul>--}}
 
         </div>
 

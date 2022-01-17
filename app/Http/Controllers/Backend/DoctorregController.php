@@ -9,6 +9,7 @@ use App\Models\IbhDept;
 use App\Models\IbhDoctor;
 use App\Models\Logo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use niklasravnsborg\LaravelPdf\Facades\Pdf;
 
 class DoctorregController extends Controller
@@ -146,26 +147,58 @@ class DoctorregController extends Controller
 
 ///Department wiese Doctor Show
 
-public function ibchDoctor(Request $request,$dep_id){
+public function ibchDoctor(){
 
+//    $data['logo']=Logo::first();
+
+//    $users = DB::table('ibh_doctors');
+//              dd($users);
+//    $data = IbhDoctor::all();
+//
+//    dd($data);
+$data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+    ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+    ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+    ->get();
+   /* $doctrors = DB::table('ibh_doctors')
+           ->join('branches','ibh_doctors.branch_id','=','branches.id')
+           ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+           ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+
+        ->get();*/
     $data['logo']=Logo::first();
+    $dat['departments']=IbhDept::all();
 
 
-    $data['branches']=Branch::orderBy('id', 'asc')->get();
+//        ->join('ibh_doctors', 'ibh_doctors.branch_id', '=', 'branches.branch_id')
+//
+//
+//        ->join(' ibh_doctors', 'ibh_doctors.dep_id', '=', 'ibh_depts.dep_id')
+//        ->select('ibh_doctors.*', 'ibh_doctors.name', 'ibh_depts.name');
+//        dd($users);
+//        ->get();
 
+
+
+    /*$data['logo']=Logo::first();
+
+
+    $data=IbhDoctor::where('branch_id','name')->where('dep_id','name')->get();
+    $productById = DB::table('ibh_doctors')
+        ->join('branches', 'ibh_depts.branch_id', '=', 'branches.id')
+
+        ->select('ibh_doctors.*', 'branches.name')
+        ->where('ibh_doctors',$id)
+        ->first();
+
+
+
+    $data['branches']=Branch::all();
     $data['departments']=IbhDept::all();
-    $data['branch_id']=$request->branch_id;
-    $data['dep_id']=$request->dep_id;
-    $data['allData']=AssignDoctor::where('branch_id',$request->branch_id)->where('dep_id',$request->dep_id)->get();
+    $data ['allData']=AssignDoctor::where('dep_id', '3')->get();
 
 
-
-    /*$data['branches']=Branch::all();
-    $data['departments']=IbhDept::all();
-    $data ['allData']=AssignDoctor::where('dep_id', '3')->get();*/
-
-
-        /*$data['editData']=AssignDoctor::with(['doctor'])->where('doctor_id')->first();
+        data['editData']=AssignDoctor::with(['doctor'])->where('doctor_id')->first();
          dd($data['editData']->toArray());
 
     $data['branches']=Branch::orderBy('id', 'asc')->get();

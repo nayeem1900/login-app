@@ -151,10 +151,7 @@ class FrontendController extends Controller
 
 
         $data['logo']=Logo::first();
-        $data['branches']=Branch::all();
         $data['departments']=IbhDept::all();
-        $data['allData']=AssignDoctor::where('branch_id','2')->get();
-
 
         return view('frontend.pages.ibch-medi',$data);
         /*

@@ -60,7 +60,7 @@
 
                         <td>
                             {{--<button type="submit"class="btn btn-primary btn-sm" name="search" href=""><i class="fa fa-search"></i></button>--}}
-                            <a title="Details" class="btn btn-sm btn-primary" href="{{route('dep.ibch.doctor.details')}}"><i class="fa fa-search"></i></a>
+                            <a  class="btn btn-sm btn-primary" href="{{route('dep.ibch.doctor.details')}}"><i class="fa fa-search"></i></a>
                             {{-- <a target="_blank" title="Details" class="btn btn-sm btn-info" href="--}}{{--{{route('doctor.registration.details',$value->doctor_id)}}--}}{{--"><i class="fa fa-search"></i></a>--}}
 
                         </td>
