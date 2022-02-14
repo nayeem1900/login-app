@@ -10,10 +10,12 @@ use App\Models\Etender;
 use App\Models\Ibchk;
 use App\Models\IbchkDep;
 use App\Models\IbhDept;
+use App\Models\IbhDoctor;
 use App\Models\Logo;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class FrontendController extends Controller
 {
@@ -21,6 +23,7 @@ class FrontendController extends Controller
     public function index(){
         $data['logo']=Logo::first();
         $data['sliders']=Slider::orderBy('id','desc')->get();
+        $data['branches']=Branch::all();
         return view ('frontend.layouts.home',$data);
 
     }
@@ -106,8 +109,23 @@ class FrontendController extends Controller
 
     public function ibch(){
         $data['logo']=Logo::first();
-        $data['allData']=IbchkDep::all();
-        $data['allDoctor']=Ibchk::all();
+        /*$data['allData']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','2')
+
+            ->get();*/
+        $data['departments']=IbhDept::all();
+        $data['doctor'] = IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','2')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('dep_id','DESC')
+            ->get();
+
+        Session::put('branchId', 2);
+
+
+
         return view('frontend.pages.ibch',$data);
     }
 
@@ -152,7 +170,7 @@ class FrontendController extends Controller
 
         $data['logo']=Logo::first();
         $data['departments']=IbhDept::all();
-
+        $data['branches']=Branch::all();
         return view('frontend.pages.ibch-medi',$data);
         /*
         $data['ibchkdeps']=IbchkDep::all();
@@ -190,10 +208,66 @@ class FrontendController extends Controller
     }
 
 //motijheel
-    public function motijheel(){
+    public function motijheel($id){
         $data['logo']=Logo::first();
-        $data['allData']=IbchkDep::all();
-        $data['allDoctor']=Ibchk::all();
+        /*$data['branches']=Branch::all();*/
+        $data['departments']=IbhDept::all();
+//        $data['branchs'] = Branch::all();
+
+        $data['office']= IbhDoctor::with('department')->where('branch_id', $id)->get()->unique('dep_id');
+
+
+        /*$data['allData']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','2')
+
+            ->get();
+
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','5')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('dep_id','DESC')
+            ->get();*/
+
         return view('frontend.pages.motijheel_hospital',$data);
     }
+
+  /*public function Head($id){
+
+
+        $data['logo']=Logo::first();
+
+        $data['heads']=IbhDept::all();
+        $data['sliders']=Slider::orderBy('id','desc')->get();
+      $data['branches']=Branch::all();
+       $data['office']= IbhDoctor::with('department')->where('branch_id', $id)->get()->unique('dep_id');
+
+
+
+        return view ('frontend.pages.ibch-medi',$data);
+    }*/
+
+
+
+    public function mugdha(){
+        $data['departments']=IbhDept::all();
+        /*$data['ibchkdeps']=IbhDept::all();*/
+        $data['logo']=Logo::first();
+
+
+
+      $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','7')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('dep_id','DESC')
+            ->get();
+
+        Session::put('branchId', 7);
+
+        return view('frontend.pages.ibh_mugdha',$data);
+    }
+
+
 }

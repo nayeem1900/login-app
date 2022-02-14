@@ -37,9 +37,9 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3>Branch List
-
+                                    @isset(auth()->user()->role->permission['permission']['branch']['add'])
                                         <a class="btn btn-success float-right btn-sm" href="{{route('branch.add')}}"><i class="fa fa-plus-circle"></i> Add Branch</a>
-
+                                    @endisset
                                 </h3>
 
                             </div><!-- /.card-header -->
@@ -63,8 +63,10 @@
                                             <td>{{($value->name)}}</td>
 
                                                 <td>
+                                                    @isset(auth()->user()->role->permission['permission']['branch']['edit'])
                                                     <a title="Edit" class="btn btn-sm btn-primary" href="{{route('branch.edit',$value->id)}}"><i class="fa fa-edit"></i></a>
-                                                    {{-- <a title="Delete" class="btn btn-sm btn-danger" href="{{route('users.delete',$user->id)}}"><i class="fa fa-trash"></i></a>--}}
+                                                    @endisset
+                                                    @isset(auth()->user()->role->permission['permission']['branch']['delete'])
                                                     <a href="#deleteModal{{$value->id}}" data-toggle="modal" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
 
                                                     <!-- Modal -->
@@ -94,7 +96,7 @@
                                                         </div>
                                                     </div>
 
-
+                                                    @endisset
 
                                                 </td>
 

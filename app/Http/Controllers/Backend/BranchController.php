@@ -12,7 +12,7 @@ class BranchController extends Controller
 
             $data['allData']=Branch::all();
 
-            return view ('backend.branch.view-branch',$data);
+         return view ('backend.branch.view-branch',$data);
         }
     public function add(){
 

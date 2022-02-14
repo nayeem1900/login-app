@@ -31,7 +31,8 @@ $route=Route::current()->getName();
             </ul>
         </li>
 
-        <li class="nav-item has-treeview">
+
+        <li class="nav-item has-treeview {{($prefix=='/users')?'menu-open':''}}">
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
@@ -41,20 +42,13 @@ $route=Route::current()->getName();
                 </p>
             </a>
             <ul class="nav nav-treeview">
+
                 <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Your Profile</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('profiles.password.view')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Change Your password</p>
                     </a>
                 </li>
-
-
 
             </ul>
         </li>
@@ -248,7 +242,7 @@ $route=Route::current()->getName();
             </ul>
         </li>
         @endisset
-
+        @isset(auth()->user()->role->permission['permission']['branch']['view'])
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
@@ -262,14 +256,15 @@ $route=Route::current()->getName();
                 <li class="nav-item">
                     <a href="{{route('branch.view')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>View Branch</p>
+                        <p>B_Branch</p>
                     </a>
                 </li>
 
 
             </ul>
         </li>
-
+        @endisset
+        @isset(auth()->user()->role->permission['permission']['dep']['view'])
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
@@ -290,7 +285,8 @@ $route=Route::current()->getName();
 
             </ul>
         </li>
-
+        @endisset
+        @isset(auth()->user()->role->permission['permission']['doctor_reg']['view'])
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
@@ -316,33 +312,7 @@ $route=Route::current()->getName();
 
             </ul>
         </li>
-
-       {{-- <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-copy"></i>
-                <p>
-                    Motijheel Hospital
-                    <i class="fas fa-angle-left right"></i>
-
-                </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="{{route('motijheel.dept.view')}}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>View Dept</p>
-                    </a>
-                </li>
-
-               --}}{{-- <li class="nav-item">
-                    <a href="{{route('ibchk.doctor.view')}}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>View Doctor</p>
-                    </a>
-                </li>--}}{{--
-
-            </ul>
-        </li>--}}
+        @endisset
 
 
 

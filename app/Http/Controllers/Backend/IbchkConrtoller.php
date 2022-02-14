@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Branch;
 use App\Models\Ibchk;
 use App\Models\IbchkDep;
+use App\Models\IbhDoctor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class IbchkConrtoller extends Controller
 {
@@ -145,30 +148,15 @@ public function ibchkdoctorupdate(Request $request,$id){
         return redirect()->route('ibchk.doctor.view');
     }
 
-    //Get Subcategory With Ajax
+
 
     public function getIbchDoctor(Request $request){
 
-        $ibchkdep_id=$request->ibchkdep_id;
+        $ibh_dep_id=$request->department_id;
+        $allIbchkDoctor = IbhDoctor::join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')->where('dep_id', $ibh_dep_id)
+            ->where('branch_id', Session::get('branchId'))->get();
 
-            $allIbchkDoctor = Ibchk::where('ibchkdep_id', $ibchkdep_id)->get();
-
-
-    return response()->json($allIbchkDoctor);
-    }
-
-
-
-    //Get Subcategory With Ajax
-
-  /*  public function getIbchDoctor(Request $request){
-
-        $ibchkdep_id=$request->ibchkdep_id;
-        $allIbchkDoctor=Ibchk::where('ibchkdep_id',$ibchkdep_id)->get();
         return response()->json($allIbchkDoctor);
-    }   */
-
-
-
+    }
 
 }

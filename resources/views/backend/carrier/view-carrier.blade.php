@@ -70,8 +70,12 @@
 
 
                                             <td>
+                                                @isset(auth()->user()->role->permission['permission']['carrier']['edit'])
                                                 <a title="Edit" class="btn btn-sm btn-primary" href="{{route('carriers.edit',$carrier->id)}}"><i class="fa fa-edit"></i></a>
+                                                @endisset
                                                 {{-- <a title="Delete" class="btn btn-sm btn-danger" href="{{route('users.delete',$user->id)}}"><i class="fa fa-trash"></i></a>--}}
+
+                                                @isset(auth()->user()->role->permission['permission']['carrier']['delete'])
                                                 <a href="#deleteModal{{$carrier->id}}" data-toggle="modal" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
 
                                                 <!-- Modal -->
@@ -100,9 +104,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
-
+                                                @endisset
 
                                             </td>
 

@@ -51,22 +51,35 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($departments as $key=>$value)
+               {{-- @foreach($departments as $key=>$value)
                     <tr>
                         <td>{{$key+1}}</td>
                         <td>{{$value->name}}</td>
-                        {{--<td>{{$value->name}}</td>--}}
+                        --}}{{--<td>{{$value->name}}</td>--}}{{--
 
 
                         <td>
-                            {{--<button type="submit"class="btn btn-primary btn-sm" name="search" href=""><i class="fa fa-search"></i></button>--}}
+                            --}}{{--<button type="submit"class="btn btn-primary btn-sm" name="search" href=""><i class="fa fa-search"></i></button>--}}{{--
                             <a  class="btn btn-sm btn-primary" href="{{route('dep.ibch.doctor.details')}}"><i class="fa fa-search"></i></a>
-                            {{-- <a target="_blank" title="Details" class="btn btn-sm btn-info" href="--}}{{--{{route('doctor.registration.details',$value->doctor_id)}}--}}{{--"><i class="fa fa-search"></i></a>--}}
+                            --}}{{-- <a target="_blank" title="Details" class="btn btn-sm btn-info" href="--}}{{----}}{{--{{route('doctor.registration.details',$value->doctor_id)}}--}}{{----}}{{--"><i class="fa fa-search"></i></a>--}}{{--
 
                         </td>
 
                     </tr>
-                @endforeach
+                @endforeach--}}
+
+
+
+               <div class="card" style="width: 18rem;">
+
+                   <ul class="list-group list-group-flush">
+                       @foreach($office as $item)
+                           <li class="list-group-item">{{($item->department->name)}}</li>
+                       @endforeach
+                   </ul>
+               </div>
+
+
 
                 </tbody>
 
@@ -80,15 +93,15 @@
 
 
         <div class="row">
-
+{{--
             <ul>
                 <h1>Islami Bank Hospital Doctors Department</h1>
                 @foreach($departments as $key=>$value)
-                    {{--<td>{{$value['doctor']['doctor_name']}}</td>--}}
+                    --}}{{--<td>{{$value['doctor']['doctor_name']}}</td>--}}{{--
                     <li>{{$value->name}}</li>
 
                 @endforeach
-            </ul>
+            </ul>--}}
 
         </div>
 

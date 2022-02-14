@@ -44,4 +44,6 @@ class IbhDoctor extends Model
         return $this->belongsTo(Logo::class,'logo_id', 'id');
     }
 
+
+
 }

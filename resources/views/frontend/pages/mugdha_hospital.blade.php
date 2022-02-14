@@ -2,7 +2,7 @@
 @extends('frontend.layouts.master')
 @section('content')
     <div class="container">
-        <h1 style="text-align: center">Islami Bank Hospital, Motijheel</h1>
+        <h1 style="text-align: center">Islami Bank Hospital,Muhdha</h1>
         <div class="header_image">
             <img src="{{url('frontend/images/kakrial.jpg')}}" class="d-block w-100" width="" alt="">
         </div>
@@ -29,7 +29,7 @@
             </nav>
         </div>
 
-        <strong>Welcome To Islami Bank Hospital, Motijheel.</strong>
+        <strong>Welcome To Islami Bank Hospital, Mughda.</strong>
         <p>Islami Bank Central Hospital Motijheel is a largest and fast growing Hospital in Dhaka. The Hospital has founded 13 April 1993. It is a 135 beded hospital. We believe the Hospital will go ahead as a pioneer private Hospital in Dhaka.The Hospital operates its daily activities of the own building. There are three building in Hospitalt. It has 06 operation theaters including 01 Eye OT. There are also 05 preoperative and 06 post operative room. There have Modern ICU that leaded by famous and expert Consulant and medical related people.</p>
 
 
@@ -37,7 +37,7 @@
 
         <br>
 
-       <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;">
 
             <ul class="list-group list-group-flush">
                 @foreach($office as $item)
@@ -59,12 +59,12 @@
             </thead>
             <tbody>
             @foreach($office as $item)
-            <tr>
+                <tr>
 
-                <td><a href="">{{($item->department->name)}}</a> </td>
-                <td>{{($item->doctor_name)}}</td>
+                    <td><a href="">{{($item->department->name)}}</a> </td>
+                    <td>{{($item->doctor_name)}}</td>
 
-            </tr>
+                </tr>
             @endforeach
             </tbody>
         </table>

@@ -180,6 +180,63 @@
                                                   </td>
 
                                               </tr>
+                                              <tr>
+                                                  <td>Doctor Reg</td>
+
+                                                  <td>
+                                                      <input type="checkbox" name="permission[doctor_reg][view]" value="1">
+                                                  </td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[doctor_reg][add]" value="1">
+                                                  </td>
+
+                                                  <td>
+                                                      <input type="checkbox" name="permission[doctor_reg][edit]" value="1">
+                                                  </td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[doctor_reg][delete]" value="1">
+                                                  </td>
+
+                                              </tr>
+                                              <tr>
+                                                  <td>Branch</td>
+
+                                                  <td>
+                                                      <input type="checkbox" name="permission[branch][view]" value="1">
+                                                  </td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[branch][add]" value="1">
+                                                  </td>
+
+                                                  <td>
+                                                      <input type="checkbox" name="permission[branch][edit]" value="1">
+                                                  </td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[branch][delete]" value="1">
+                                                  </td>
+
+                                              </tr>
+
+
+
+                                              <tr>
+                                                  <td>Department</td>
+
+                                                  <td>
+                                                      <input type="checkbox" name="permission[dep][view]" value="1">
+                                                  </td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[dep][add]" value="1">
+                                                  </td>
+
+                                                  <td>
+                                                      <input type="checkbox" name="permission[dep][edit]" value="1">
+                                                  </td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[dep][delete]" value="1">
+                                                  </td>
+
+                                              </tr>
 
 
                                               <tr>

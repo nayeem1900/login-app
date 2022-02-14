@@ -18,6 +18,8 @@ use App\Http\Controllers\Backend\IbhdeptController;
 use App\Http\Controllers\Backend\AssigndoctorController;
 use App\Http\Controllers\Backend\DoctorregController;
 use App\Http\Controllers\Backend\DefaultController;
+use App\Http\Controllers\Backend\PasswordController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +30,7 @@ use App\Http\Controllers\Backend\DefaultController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*Route::get('/head',[FrontendController::class,'Head'])->name('index');*/
 Route::get('/',[FrontendController::class,'index'])->name('index');
 Route::get('/etender',[FrontendController::class,'etender'])->name('etender');
 Route::get('/hospital-info',[FrontendController::class,'hospitalinfo'])->name('hospital-info');
@@ -57,8 +59,13 @@ Route::get('ibchdep',[FrontendController::class,'ibchDep'])->name('ibch.dep');
 Route::get('ibchmedi',[FrontendController::class,'ibchmedi'])->name('ibch.medi');
 Route::get('ibchchestmedi',[FrontendController::class,'chestMedi'])->name('ibch.chestmedi');
 //Bank_Hospital Motijheel
-Route::get('motijheel-hospital',[FrontendController::class,'motijheel'])->name('motijheel');
 
+/*Route::get('branch/{id}',[FrontendController::class,'motijheel'])->name('motijheel');
+Route::get('dep-doctor/',[FrontendController::class,'motijheel'])->name('motijheel');*/
+
+//Mugdha
+Route::get('ibh_mugdha',[FrontendController::class,'mugdha'])->name('mugdha');
+/*Route::get('branch/head/{id}',[FrontendController::class,'Head'])->name('head');*/
 
 /*Route::get('/', function () {
     return view('welcome');
@@ -82,6 +89,14 @@ Route::group(['prefix'=>'admin','middleware'=>['admin','auth','permission']],fun
 
 });
 
+
+Route::group(['prefix'=>'password','middleware'=>['admin','auth','permission']],function () {
+
+    Route::get('/password/view',[PasswordController::class,'passwordView'])->name('profiles.password.view');
+    Route::post('/password/update',[PasswordController::class,'passwordUpdate'])->name('profiles.password.update');
+
+
+});
 
 Route::group(['prefix'=>'logos','middleware'=>['admin','auth','permission']],function () {
 
@@ -153,7 +168,8 @@ Route::group(['prefix'=>'ibchkdep','middleware'=>['admin','auth','permission']],
     Route::get('/ibchkdoctor/edit/{id}',[IbchkConrtoller::class,'ibchkdoctoredit'])->name('ibchk.doctor.edit');
     Route::post('/ibchkdoctor/update/{id}',[IbchkConrtoller::class,'ibchkdoctorupdate'])->name('ibchk.doctor.update');
     Route::post('/ibchkdoctor/delete/{id}',[IbchkConrtoller::class,'ibchkdoctordelete'])->name('ibchk.doctor.delete');
-    Route::get('ibchkdoctor/ajax/',[IbchkConrtoller::class,'getIbchDoctor'])->name('ajax-doctor');
+
+    Route::get('ibchkdoctor/ajax',[IbchkConrtoller::class,'getIbchDoctor'])->name('ajax-doctor');
 });
 
 /*<!!!!!-----Islami Bank Hospital Motijheel!!!!!!!!------>*/
@@ -172,7 +188,7 @@ Route::group(['prefix'=>'motijheeldep','middleware'=>['admin','auth','permission
 ///Branch
 Route::group(['prefix'=>'branch','middleware'=>['admin','auth','permission']],function () {
 
-    Route::get('/view',[BranchController::class,'view'])->name('branch.view');
+   Route::get('/viewontest',[BranchController::class,'view'])->name('branch.view');
     Route::get('/add',[BranchController::class,'add'])->name('branch.add');
     Route::post('/store',[BranchController::class,'store'])->name('branch.store');
     Route::get('/edit/{id},',[BranchController::class,'edit'])->name('branch.edit');
@@ -198,8 +214,8 @@ Route::group(['prefix'=>'department','middleware'=>['admin','auth','permission']
 
 
 Route::group(['prefix'=>'assigndoctor','middleware'=>['admin','auth','permission']],function () {
-    Route::get('/view1',[AssigndoctorController::class,'view1'])->name('assign.doctor.view1');
-    Route::get('/view',[AssigndoctorController::class,'view'])->name('assign.doctor.view');
+    Route::get('/view1',[AssigndoctorController::class,'view1'])->name('assign.doctor.view');
+  /*  Route::get('/view',[AssigndoctorController::class,'view'])->name('assign.doctor.view');*/
     Route::get('/add',[AssigndoctorController::class,'add'])->name('assign.doctor.add');
     Route::post('/store',[AssigndoctorController::class,'store'])->name('assign.doctor.store');
     Route::get('/edit/{branch_id},',[AssigndoctorController::class,'edit'])->name('assign.doctor.edit');
@@ -224,7 +240,7 @@ Route::group(['prefix'=>'doctor','middleware'=>['admin','auth','permission']],fu
 
 });
 
-Route::get('/get-doctor',[DefaultController::class,'getDoctor'])->name('get-student');
+Route::get('/get-doctor',[DefaultController::class,'getDoctor'])->name('get-doctor');
 
 
 /*Route::group(['middleware'=>'admin','auth'],function () {

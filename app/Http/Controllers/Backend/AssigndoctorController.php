@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class AssigndoctorController extends Controller
 {
-
+/*
     public function view1(){
 
         $data['departments']=IbhDept::all();
@@ -33,7 +33,7 @@ class AssigndoctorController extends Controller
     public function getbranch($branch_id){
         $department = IbhDept::where('branch_id',$branch_id)->orderBy('name','ASC')->get();
         return json_encode($department);
-    }
+    }*/
 
 
 
@@ -45,7 +45,7 @@ class AssigndoctorController extends Controller
             return view('backend.assign_doctor.add-assign-doctor',$data);
         }
 
-    public function store(Request $request){
+    /*public function store(Request $request){
 
             $assign_dep=new IbhDoctor();
             $assign_dep->branch_id=$request->branch_id;
@@ -70,7 +70,10 @@ class AssigndoctorController extends Controller
 
     session()->flash('success',' assign_doctor department update success');
     return redirect()->route('assign.doctor.view');
-}
+}*/
+
+
+
 
 
    /* public function store(Request $request){

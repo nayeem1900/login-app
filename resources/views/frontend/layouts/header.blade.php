@@ -33,19 +33,30 @@
                             </ul>
                         </li>
 
-
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" >
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Instituions
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li style="background: green;padding-left: 10px" ><hr class="dropdown-divider"><strong style="color: white">Islami Bank Hospital</strong></li>
 
-                                {{--  <p><strong>Islami Bank Hospital</strong></p>--}}
+
+{{--
+                               @foreach($branches as $item )
+                                    <li><a class="dropdown-item" href="{{ url('branch/' . $item->id) }}">{{$item->name}}</a></li>
+                                    @endforeach
+
+                                @foreach($branches as $branch)
+
+                                <li><a class="dropdown-item" href="{{$branch->id}}">{{$branch->name}} </a></li>
+                                <li><a class="dropdown-item" href="{{ url('branch/' . $item->id) }}">{{$item->name}}</a></li>
+                                @endforeach--}}
                                 <li><a class="dropdown-item" href="{{route('ibch')}}">Islami Bank Central Hospital</a></li>
-                                <li><a class="dropdown-item" href="{{route('motijheel')}}">Islami Bank Hospital Motijheel</a></li>
+
+                                <li><a class="dropdown-item" href="">Islami Bank Hospital Motijheel</a></li>
+
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Mirpur</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Mughda</a></li>
+                                <li><a class="dropdown-item" href="{{route('mugdha')}}">Islami Bank Hospital Mughda</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Spetalize Hospital,Nayapalton</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Khulna</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Barishal</a></li>
@@ -66,9 +77,9 @@
                                 <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Health Education</strong></li>
 
                                 <li><a class="dropdown-item" href="#">Islami Bank Medical College Rajsahi</a></li>
-                                <li><a class="dropdown-item" href="http://ibncr.edu.bd/">Islami Bank Nursing College Rajsahi</a></li>
-                                <li><a class="dropdown-item" href="http://ibncb.edu.bd/">Islami Bank Nursing Institute Barisal</a></li>
-                                <li><a class="dropdown-item" href="#">Islami Bank Institute of Health Technology Rajsahi</a></li>
+                                <li><a class="dropdown-item" href="http://ibncr.edu.bd/">Islami Bank Nursing College Rajshahi</a></li>
+                                <li><a class="dropdown-item" href="http://ibncb.edu.bd/">Islami Bank Nursing Institute Barishal</a></li>
+                                <li><a class="dropdown-item" href="#">Islami Bank Institute of Health Technology Rajshahi</a></li>
                                 <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Generala Education</strong></li>
 
                                 <li><a class="dropdown-item" href="http://ibiscdhaka.com">Islami Bank International School & College</a></li>
@@ -79,6 +90,10 @@
                                 <li><a class="dropdown-item" href="http://ibitsylhet.edu.bd/">Islami Bank Institute of Technology,Sylhet</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Bogura</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Chattogram</a></li>
+                                <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Savar</a></li>
+                                <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Dhaka</a></li>
+
+
                             </ul>
                         </li>
 
