@@ -3,7 +3,7 @@
 @section('content')
     <style></style>
     <div class="container">
-        <h1 style="text-align: center">Islami Bank Central Hospital,Mugdha. Hotline:01810000116</h1>
+        <h2 style="text-align: center">Islami Bank Hospital,Mugdha. Hotline:01724008677</h2>
         <div class="header_image">
             <img src="{{url('frontend/images/kakrial.jpg')}}" class="d-block w-100" width="" alt="">
         </div>
@@ -43,11 +43,19 @@
                 Department
             </button>
 
+
+
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 @foreach($departments as $department)
                     <li><a class="dropdown-item department" id="department" data-id="{{ $department->id }}" href="javascript:">{{$department->name}}</a></li>
                 @endforeach
             </ul>
+
+           {{-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                @foreach($departments as $department)
+                    <li><a class="dropdown-item department" id="department" data-id="{{ $department->id }}" href="javascript:">{{$department->name}}</a></li>
+                @endforeach
+            </ul>--}}
 
         </div>
         <br/>
@@ -79,7 +87,7 @@
 
                         <td>
 
-                            <img  src="{{(!empty($value->img))?url('upload/doctor_images/'.$value->img):url('upload/no_img.png')}}" style="width:70px;height:80px;border:1px solid#000;">
+                           <img  src="{{(!empty($value->img))?url('upload/doctor_images/'.$value->img):url('upload/no_img.png')}}" style="width:70px;height:80px;border:1px solid#000;">
                         </td>
 
                     </tr>
@@ -111,6 +119,9 @@
 
         $(document).on('click','#department',function () {
             var departmentId = $(this).data('id');
+            $('#dropdownMenuButton1').text($(this).text());
+            var imagePath = "{{ asset('upload/doctor_images') }}";
+            var imageStyle = 'style="width:70px;height:80px;border:1px solid#000;"';
 
             $.ajax({
                 type:"GET",
@@ -130,7 +141,7 @@
                             "<td>"+ data.degree +"</td>" +
                             "<td>"+ data.schedule +"</td>" +
                             "<td>" +
-                            "<img  src='{{(!empty($value->img))?url('upload/doctor_images/'.$value->img):url('upload/no_img.png')}}' style='width:70px;height:80px;border:1px solid#000;'>" +
+                            "<img "+imageStyle+" src='"+imagePath+"/"+data.img+"'>" +
                             "</td>" +
                             "</tr>" +
                             "");

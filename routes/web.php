@@ -37,7 +37,10 @@ Route::get('/hospital-info',[FrontendController::class,'hospitalinfo'])->name('h
 Route::get('/career',[FrontendController::class,'career'])->name('career');
 Route::get('/jakat',[FrontendController::class,'jakat'])->name('jakat');
 Route::get('/contact',[FrontendController::class,'contact'])->name('contact');
-
+//ajax doctor call
+Route::get('ibchkdoctor/ajax',[IbchkConrtoller::class,'getIbchDoctor'])->name('ajax-doctor');
+Route::get('finddoctor/ajax',[IbchkConrtoller::class,'findDoctor'])->name('ajax-find-doctor');
+//end
 Route::get('/foundation_committee',[FrontendController::class,'foundationcommittee'])->name('foundationcommittee');
 Route::get('/at_glance',[FrontendController::class,'atglance'])->name('atglance');
 Route::get('/executive_committee',[FrontendController::class,'executivecommittee'])->name('executivecommittee');
@@ -65,6 +68,14 @@ Route::get('dep-doctor/',[FrontendController::class,'motijheel'])->name('motijhe
 
 //Mugdha
 Route::get('ibh_mugdha',[FrontendController::class,'mugdha'])->name('mugdha');
+//Barisal
+Route::get('barisal',[FrontendController::class,'barisal'])->name('barisal');
+
+//Nayapaltan
+Route::get('ibh_paltan',[FrontendController::class,'Paltan'])->name('paltan');
+//Find Doctor
+Route::get('find-doctor/',[FrontendController::class,'Finddoctor'])->name('find-doctor');
+Route::get('find-doctor1/{id}',[FrontendController::class,'Finddoctor1'])->name('find-doctor1');
 /*Route::get('branch/head/{id}',[FrontendController::class,'Head'])->name('head');*/
 
 /*Route::get('/', function () {
@@ -169,7 +180,7 @@ Route::group(['prefix'=>'ibchkdep','middleware'=>['admin','auth','permission']],
     Route::post('/ibchkdoctor/update/{id}',[IbchkConrtoller::class,'ibchkdoctorupdate'])->name('ibchk.doctor.update');
     Route::post('/ibchkdoctor/delete/{id}',[IbchkConrtoller::class,'ibchkdoctordelete'])->name('ibchk.doctor.delete');
 
-    Route::get('ibchkdoctor/ajax',[IbchkConrtoller::class,'getIbchDoctor'])->name('ajax-doctor');
+  /*  Route::get('ibchkdoctor/ajax',[IbchkConrtoller::class,'getIbchDoctor'])->name('ajax-doctor');*/
 });
 
 /*<!!!!!-----Islami Bank Hospital Motijheel!!!!!!!!------>*/

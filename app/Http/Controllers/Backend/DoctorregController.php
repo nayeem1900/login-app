@@ -9,6 +9,7 @@ use App\Models\IbhDept;
 use App\Models\IbhDoctor;
 use App\Models\Logo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use niklasravnsborg\LaravelPdf\Facades\Pdf;
 
@@ -17,7 +18,6 @@ class DoctorregController extends Controller
     public function view(){
 
             $data['branches']=Branch::orderBy('id', 'asc')->get();
-
             $data['departments']=IbhDept::all();
             $data['branch_id']=Branch::orderBy('id','asc')->first()->id;
             $data['dep_id']=IbhDept::orderBy('id','asc')->first()->id;
@@ -72,7 +72,7 @@ class DoctorregController extends Controller
             $file->move(public_path('upload/doctor_images'),$filename);
             $user['img']=$filename;
         }
-
+        $user->created_by=Auth::user()->id;
             $user->save();
 
             $assign_doctor=new AssignDoctor();

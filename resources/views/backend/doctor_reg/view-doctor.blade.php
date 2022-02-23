@@ -37,9 +37,9 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3>Doctor List
-
+                                    @isset(auth()->user()->role->permission['permission']['doctor_reg']['add'])
                                         <a class="btn btn-success float-right btn-sm" href="{{route('doctor.registration.add')}}"><i class="fa fa-plus-circle"></i> Add Doctor</a>
-
+                                    @endisset
                                 </h3>
 
                             </div><!-- /.card-header -->
@@ -86,7 +86,7 @@
 
                             </div>
                             <div class="card-body">
-                                @if(!@$search)
+
 
                                     <table id="example1" class="table table-bordered table-hover">
 
@@ -120,10 +120,10 @@
 
 
                                                 <td>
-
+                                                    @isset(auth()->user()->role->permission['permission']['doctor_reg']['edit'])
                                                         <a title="Edit" class="btn btn-sm btn-primary" href="{{route('doctor.registration.edit',$value->doctor_id)}}"><i class="fa fa-edit"></i></a>
 
-
+                                                    @endisset
                                                     <a target="_blank" title="Details" class="btn btn-sm btn-info" href="{{route('doctor.registration.details',$value->doctor_id)}}"><i class="fa fa-eye"></i></a>
 
 
@@ -140,7 +140,8 @@
 
                                     </table>
 
-                               @else
+
+                            {{--   @else
                                     <table id="example1" class="table table-bordered table-hover">
 
                                         <thead>
@@ -192,6 +193,7 @@
 
                                     </table>
                                 @endif
+---}}
 
                             </div><!-- /.card-body -->
                         </div>

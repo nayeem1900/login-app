@@ -57,11 +57,12 @@
 
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Mirpur</a></li>
                                 <li><a class="dropdown-item" href="{{route('mugdha')}}">Islami Bank Hospital Mughda</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Spetalize Hospital,Nayapalton</a></li>
+                                <li><a class="dropdown-item" href="{{route('paltan')}}">Islami Bank Specialized & General Hospital, Nayapaltan</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Khulna</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Barishal</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Chottogram</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Luxmipur,Rajshahi</a></li>
+                                <li><a class="dropdown-item" href="{{route('barisal')}}">Islami Bank Hospital Barisal</a></li>
+                                <li><a class="dropdown-item" href="">Islami Bank Hospital Chattogram</a></li>
+                                <li><a class="dropdown-item" href="">Islami Bank Hospital Luxmipur, Rajshahi</a></li>
+                                <li><a class="dropdown-item" href="">Islami Bank Medical College Hospital,(Nawdapara)Rajshahi</a></li>
                                 <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Community Hospital</strong></li>
 
                                 <li><a class="dropdown-item" href="#">Islami Bank Community Hospital, Faridpur Ltd</a></li>
@@ -98,8 +99,6 @@
                         </li>
 
 
-
-
                         <li class="nav-item">
                             <a class="nav-link" href="#">Media Room</a>
                         </li>
@@ -109,20 +108,29 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Forms & Publication</a>
                         </li>
-                        <li class="nav-item">
+                        {{--<li class="nav-item">
                             <a class="nav-link" href="#">Gallery</a>
-                        </li>
+                        </li>--}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('career')}}">Career</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                         </li>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="finddoctorId" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Find Doctor
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    @foreach($branches as $branch)
+                                <li><a class="dropdown-item" href="{{route('find-doctor1',$branch->id)}}">{{$branch->name}}</a></li>
+                                    @endforeach
+                            </ul>
+                        </li>
 
                     </ul>
 
-                </div>
+                </div>  
             </div>
         </nav>
 

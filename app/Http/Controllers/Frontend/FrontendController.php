@@ -29,16 +29,19 @@ class FrontendController extends Controller
     }
 
     public function foundationcommittee(){
+        $data['branches']=Branch::all();
         $data['logo']=Logo::first();
         return view('frontend.pages.foundation_committee',$data);
     }
 
     public function atglance(){
+        $data['branches']=Branch::all();
         $data['logo']=Logo::first();
         return view('frontend.pages.atglance',$data);
     }
 
     public function executivecommittee(){
+        $data['branches']=Branch::all();
         $data['logo']=Logo::first();
         return view('frontend.pages.executive_committee',$data);
     }
@@ -48,6 +51,7 @@ class FrontendController extends Controller
     }
 
     public function auditcommittee(){
+        $data['branches']=Branch::all();
         $data['logo']=Logo::first();
         return view('frontend.pages.audit_committee',$data);
     }
@@ -85,6 +89,7 @@ class FrontendController extends Controller
     public function etender(){
 
         $now=  date('Y-m-d'); $data['logo']=Logo::first();
+        $data['branches']=Branch::all();
         $data['allData']=Etender::where('deadline', '>=',$now)->orderBy('id','desc')->get();
 
         return view('frontend.pages.etender',$data);
@@ -93,6 +98,7 @@ class FrontendController extends Controller
     public function career(){
 
         $now=  date('Y-m-d'); $data['logo']=Logo::first();
+        $data['branches']=Branch::all();
         $data['allData']=Carrier::where('deadline', '>=',$now)->orderBy('id','desc')->get();
 
         return view('frontend.pages.career',$data);
@@ -109,17 +115,19 @@ class FrontendController extends Controller
 
     public function ibch(){
         $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
         /*$data['allData']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
             ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
             ->where('branch_id','2')
 
             ->get();*/
-        $data['departments']=IbhDept::all();
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+
         $data['doctor'] = IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
             ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
             ->where('branch_id','2')
             ->select('ibh_doctors.*','branches.name','ibh_depts.name')
-            ->orderBy('dep_id','DESC')
+            ->orderBy('ibh_depts.name','ASC')
             ->get();
 
         Session::put('branchId', 2);
@@ -251,7 +259,9 @@ class FrontendController extends Controller
 
 
     public function mugdha(){
+
         $data['departments']=IbhDept::all();
+        $data['branches']= Branch::all();
         /*$data['ibchkdeps']=IbhDept::all();*/
         $data['logo']=Logo::first();
 
@@ -261,7 +271,7 @@ class FrontendController extends Controller
             ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
             ->where('branch_id','7')
             ->select('ibh_doctors.*','branches.name','ibh_depts.name')
-            ->orderBy('dep_id','DESC')
+          ->orderBy('doctor_name','ASC')
             ->get();
 
         Session::put('branchId', 7);
@@ -269,5 +279,53 @@ class FrontendController extends Controller
         return view('frontend.pages.ibh_mugdha',$data);
     }
 
+    public function Paltan(){
+        $data['departments']=IbhDept::all();
+        $data['logo']=Logo::first();
+
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','8')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('dep_id','DESC')
+            ->get();
+
+        Session::put('branchId', 8);
+
+        return view('frontend.pages.naya_paltan',$data);
+    }
+    public function barisal(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','6')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 6);
+
+        return view('frontend.pages.barisal',$data);
+    }
+
+    public function Finddoctor (){
+
+        $data['branches']=Branch::all();
+        $data['logo']=Logo::first();
+        return view('frontend.pages.finddoctor',$data);
+
+    }
+
+    public function Finddoctor1 ($bracnId){
+
+        $data['branches']= Branch::all();
+        $data['brancheData']= Branch::where('id', $bracnId)->first('name');
+        $data['logo']= Logo::first();
+        $data['ibhdoctor'] = IbhDoctor::where('branch_id', $bracnId)->get();
+        return view('frontend.pages.finddoctor1',$data);
+
+    }
 
 }

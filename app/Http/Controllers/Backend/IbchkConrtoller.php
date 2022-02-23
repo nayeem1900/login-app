@@ -159,4 +159,12 @@ public function ibchkdoctorupdate(Request $request,$id){
         return response()->json($allIbchkDoctor);
     }
 
+    public function findDoctor(Request $request){
+        $branch_id=$request->branch_id;
+        $data=IbhDoctor::all();
+
+        return response()->json($data);
+    }
+
+
 }

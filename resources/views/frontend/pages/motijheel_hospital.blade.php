@@ -135,9 +135,47 @@
     </div>
     <script src="{{asset('backend/select2')}}"></script>
     <script src="{{asset('backend/js/jquery-2.2.4.min.js')}}"></script>
-
-
     <script type="text/javascript">
+
+        $(document).on('click','#department',function () {
+            var departmentId = $(this).data('id');
+            var imagePath = "{{ asset('upload/doctor_images') }}";
+            var imageStyle = 'style="width:70px;height:80px;border:1px solid#000;"';
+
+            $.ajax({
+                type:"GET",
+                url:"{{route('ajax-doctor')}}",
+                data:{
+                    department_id:departmentId
+                },
+                success:function (res){
+                    $(".filter_data").html("");
+                    $.each(res, function(index, data){
+
+                        $(".filter_data").append("" +
+                            "<tr>" +
+                            "<td>"+ (parseInt(index)+1) +"</td>" +
+                            "<td>"+data.name+"</td>" +
+                            "<td>"+ data.doctor_name +"</td>" +
+                            "<td>"+ data.degree +"</td>" +
+                            "<td>"+ data.schedule +"</td>" +
+                            "<td>" +
+                            "<img "+imageStyle+" src='"+imagePath+"/"+data.img+"'>" +
+                            "</td>" +
+                            "</tr>" +
+                            "");
+                    });
+
+                },
+                error:function(xhr){
+                    console.table(xhr);
+                }
+            });
+        });
+
+    </script>
+
+   {{-- <script type="text/javascript">
         $(function(){
             $(document).on('change','#ibchkdep_id',function () {
                 var ibchkdep_id=$(this).val();
@@ -155,7 +193,7 @@
                 });
             });
         });
-    </script>
+    </script>--}}
 
 
 @endsection

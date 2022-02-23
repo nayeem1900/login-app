@@ -2,7 +2,7 @@
 @extends('frontend.layouts.master')
 @section('content')
     <div class="container">
-        <h1 style="text-align: center">Islami Bank Central Hospital, Kakrail. Hotline:01810000116</h1>
+        <h5 style="text-align: center">Islami Bank Hospital, Barisal. Hotline: 01810000121, 01318321847</h5>
         <div class="header_image">
             <img src="{{url('frontend/images/kakrial.jpg')}}" class="d-block w-100" width="" alt="">
         </div>
@@ -22,9 +22,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Department</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Service</a>
-                            </li>
                             <l class><a href="https://www.facebook.com/ibfpage"><i class="fa fa-facebook fa-2x"></i></a></l>
                         </ul>
                     </div>
@@ -32,14 +29,14 @@
             </nav>
         </div>
 
-        <strong>Welcome To Islami Bank Central Hospital, Kakrail, Dhaka.</strong>
-        <p style="text-align: justify">Islami Bank Central Hospital Kakrail is a largest and fast growing Hospital in Dhaka. The Hospital has founded 2002. It is a 250 beded hospital. We believe the Hospital will go ahead as a pioneer private Hospital in Dhaka.The Hospital operates its daily activities of the own building. There are three building in Hospital. It has 06 operation theaters including 01 Eye OT. There are also 05 preoperative and 06 post operative room. There have Modern ICU that leaded by famous and expert Consulant and medical related people. </p>
+        <strong>Welcome To Islami Bank Hospital, Barisal.</strong>
+        <p style="text-align: justify">Islami Bank Central Hospital Barisal is a largest and fast growing Hospital in Dhaka. The Hospital has founded 13 April 1993. It is a 135 beded hospital. We believe the Hospital will go ahead as a pioneer private Hospital in Dhaka.The Hospital operates its daily activities of the own building. There are three building in Hospitalt. It has 06 operation theaters including 01 Eye OT. There are also 05 preoperative and 06 post operative room. There have Modern ICU that leaded by famous and expert Consulant and medical related people.</p>
 
 
         <br>
         <h5>Select Your Doctor Department</h5>
         <div class="dropdown">
-            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Department
             </button>
 
@@ -117,7 +114,7 @@
 
         $(document).on('click','#department',function () {
             var departmentId = $(this).data('id');
-             $('#dropdownMenuButton1').text($(this).text());
+            $('#dropdownMenuButton1').text($(this).text());
             var imagePath = "{{ asset('upload/doctor_images') }}";
             var imageStyle = 'style="width:70px;height:80px;border:1px solid#000;"';
 
@@ -154,44 +151,7 @@
 
     </script>
 
-    {{--<script type="text/javascript">
 
-        $(document).on('click','#department',function () {
-            var departmentId = $(this).data('id');
-
-            $.ajax({
-                type:"GET",
-                url:"{{route('ajax-doctor')}}",
-                data:{
-                    department_id:departmentId
-                },
-                success:function (res){
-                    $(".filter_data").html("");
-                    $.each(res, function(index, data){
-
-                        $(".filter_data").append("" +
-                            "<tr>" +
-                            "<td>"+ (parseInt(index)+1) +"</td>" +
-                            "<td>"+data.name+"</td>" +
-                            "<td>"+ data.doctor_name +"</td>" +
-                            "<td>"+ data.degree +"</td>" +
-                            "<td>"+ data.schedule +"</td>" +
-                            "<td>" +
-                            "<img  src='{{(!empty($value->img))?url('upload/doctor_images/'.$value->img):url('upload/no_img.png')}}' style='width:70px;height:80px;border:1px solid#000;'>" +
-                            "</td>" +
-                            "</tr>" +
-                            "");
-                    });
-
-                },
-                error:function(xhr){
-                    console.table(xhr);
-                }
-            });
-        });
-
-    </script>
---}}
     <script src="{{asset('backend/select2')}}"></script>
 
     <script src="{{asset('frontend/js/j_query.3.5.js')}}"></script>

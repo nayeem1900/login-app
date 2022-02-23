@@ -37,9 +37,9 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3>Department List
-
+                                    @isset(auth()->user()->role->permission['permission']['dept']['add'])
                                     <a class="btn btn-success float-right btn-sm" href="{{route('dep.add')}}"><i class="fa fa-plus-circle"></i> Add Dep</a>
-
+                                    @endisset
                                 </h3>
 
                             </div><!-- /.card-header -->

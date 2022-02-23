@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateBranchesTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -16,6 +17,7 @@ class CreateBranchesTable extends Migration
         Schema::create('branches', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->unique();
+           /* $table->string('test')->after('name');*/
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

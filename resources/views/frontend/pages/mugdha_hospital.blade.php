@@ -30,7 +30,7 @@
         </div>
 
         <strong>Welcome To Islami Bank Hospital, Mughda.</strong>
-        <p>Islami Bank Central Hospital Motijheel is a largest and fast growing Hospital in Dhaka. The Hospital has founded 13 April 1993. It is a 135 beded hospital. We believe the Hospital will go ahead as a pioneer private Hospital in Dhaka.The Hospital operates its daily activities of the own building. There are three building in Hospitalt. It has 06 operation theaters including 01 Eye OT. There are also 05 preoperative and 06 post operative room. There have Modern ICU that leaded by famous and expert Consulant and medical related people.</p>
+        <p>Islami Bank Central Hospital Mugdha is a largest and fast growing Hospital in Dhaka. The Hospital has founded 13 April 1993. It is a 135 beded hospital. We believe the Hospital will go ahead as a pioneer private Hospital in Dhaka.The Hospital operates its daily activities of the own building. There are three building in Hospitalt. It has 06 operation theaters including 01 Eye OT. There are also 05 preoperative and 06 post operative room. There have Modern ICU that leaded by famous and expert Consulant and medical related people.</p>
 
 
 
