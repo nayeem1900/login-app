@@ -29,6 +29,8 @@ class SliderController extends Controller
     public function store(Request $request){
 
         $data =new Slider();
+        $data->h_name=$request->h_name;
+        $data->p_name=$request->p_name;
         $data->created_by=Auth::user()->id;
         if ($request->file('image')) {
 
@@ -54,7 +56,8 @@ class SliderController extends Controller
 
         $data =Slider::find($id);
         $data->updated_by=Auth::user()->id;
-
+        $data->h_name=$request->h_name;
+        $data->p_name=$request->p_name;
         if ($request->file('image')) {
 
             $file = $request->file('image');

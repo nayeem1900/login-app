@@ -102,6 +102,7 @@
                             <li class="list-group-item"><a href="http://119.18.151.65:8080/accounts">Accounts</a></li>
                             <li class="list-group-item"><a href="http://119.18.151.65:8082/PmisReport/">PMIS</a></li>
                             <li class="list-group-item"><a href="http://119.18.151.65:8081/leave">Leave</a></li>
+                            <li class="list-group-item"><a href="http://119.18.151.65:8090/eProcurement/">eProcurement</a></li>
                             <li class="list-group-item"><a href="https://www.islamibankbd.com/">Islami Bank Bangladesh</a> </li>
 
                         </ul>

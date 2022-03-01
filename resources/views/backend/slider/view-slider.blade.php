@@ -50,7 +50,8 @@
                                     <tr>
                                         <th>SL</th>
                                         <th>Image</th>
-
+                                        <th>H Text</th>
+                                        <th>P Text</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -59,7 +60,8 @@
                                         <tr>
                                             <td>{{$key+1}}</td>
                                             <td><img src="{{(!empty($slider->image))?url('upload/slider_images/'.$slider->image):url('upload/no_img.png')}}"style="width: 150px" height="160px"></td>
-                                            <td></td>
+                                            <td>{{$slider->h_name}}</td>
+                                            <td>{{$slider->p_name}}</td>
                                             <td>
                                                 @isset(auth()->user()->role->permission['permission']['slider']['edit'])
                                                 <a title="Edit" class="btn btn-sm btn-primary" href="{{route('sliders.edit',$slider->id)}}"><i class="fa fa-edit"></i></a>

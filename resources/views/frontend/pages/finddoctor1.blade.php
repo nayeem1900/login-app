@@ -19,17 +19,21 @@
         </div>
         <br/>
 
-        <div class="col-md-12">
-            <div class="row">
+       {{-- <div class="col-md-12">--}}
+
+            <div class="row find_doctor">
                 @foreach($ibhdoctor as $key=> $value)
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md mt-2">
                         <div class="card" style="width: 18rem;">
-                            <img src="" class="card-img-top" alt="...">
+
+                            <img src="{{(!empty($value->img))?url('upload/doctor_images/'.$value->img):url('upload/no_img.png')}}" style="width:100%;height:180px;border:1px solid#000;" class="card-img-top" alt="...">
+                          {{--  <img src="" class="card-img-top" alt="...">--}}
                             <div class="card-body">
-                                <h5 class="card-title">{{$value->doctor_name}}</h5>
-                                <p class="card-text">Degree</p>
-                                <p class="card-text">Schedule</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
+                                <h5 class="card-title">Doctor Name: {{$value->doctor_name}}</h5>
+                                <p class="card-text">Degree: {{$value->degree}}</p>
+                                <p class="card-text">Department: {{$value['department']['name']}}</p>
+                                <p class="card-text">Schedule: {{$value->schedule}}</p>
+                               {{-- <a href="#" class="btn btn-success"></a>--}}
 
                             </div>
                         </div>
@@ -37,7 +41,9 @@
                 @endforeach
 
             </div>
-        </div>
+
+       {{-- </div>--}}
+
 
 
 </div>

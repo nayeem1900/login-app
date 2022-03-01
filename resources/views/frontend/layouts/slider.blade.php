@@ -14,6 +14,10 @@
                 @foreach($sliders as $slider)
                     <div class="carousel-item @if($count==0){ active }@endif">
                         <img src="{{asset('upload/slider_images/'.$slider->image)}}" class="d-block w-100" alt="">
+                        <div class="carousel-caption ">
+                            <h3 style="background-color: #5e37a6">{{$slider->h_name}}</h3>
+                            <p style="background-color: black">{{$slider->p_name}}</p>
+                        </div>
 
                     </div>
                     @php

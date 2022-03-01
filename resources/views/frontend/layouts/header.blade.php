@@ -99,9 +99,23 @@
                         </li>
 
 
-                        <li class="nav-item">
+                       {{-- <li class="nav-item">
                             <a class="nav-link" href="#">Media Room</a>
+                        </li>--}}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Our Doctor
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li ><a class="dropdown-item" style="color: black" href="{{route('department-doctor')}}">Department wise</a></li>
+                                <li><a class="dropdown-item" href="">Branch wise</a></li>
+                                <li><a class="dropdown-item" href="">Name wise</a></li>
+
+
+                            </ul>
                         </li>
+
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('etender')}}">E-tender</a>
                         </li>
@@ -114,9 +128,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('career')}}">Career</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
-                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="finddoctorId" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Find Doctor
@@ -126,6 +138,10 @@
                                 <li><a class="dropdown-item" href="{{route('find-doctor1',$branch->id)}}">{{$branch->name}}</a></li>
                                     @endforeach
                             </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                         </li>
 
                     </ul>

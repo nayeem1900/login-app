@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Branch;
 use App\Models\Ibchk;
 use App\Models\IbchkDep;
+use App\Models\IbhDept;
 use App\Models\IbhDoctor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -164,6 +165,25 @@ public function ibchkdoctorupdate(Request $request,$id){
         $data=IbhDoctor::all();
 
         return response()->json($data);
+    }
+
+
+    //Department wise Doctor Search
+
+
+    public function findDoctorDepartment(Request $request){
+
+       /* parant_table->join('child_table_name', "parant_table.child_table_id", '=', 'child_table_id')*/
+
+
+     $doctors = IbhDoctor::where('branch_id', $request->branch_id)->where('dep_id', $request->dep_id)->get();
+
+        return view("frontend.pages.filter-doctor", compact('doctors'))->render();
+
+//            $branch_id=$request->branch_id;
+//            $department_wise_doctor=IbhDoctor::join('ibh_');
+
+
     }
 
 

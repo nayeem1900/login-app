@@ -12,7 +12,7 @@
                         Etender
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="">Supplier Login</a> </li>
+                        <li class="list-group-item"><a href="http://119.18.151.65:8090/eProcurement/SupplierLogin.aspx">Supplier Login</a> </li>
                         <p class="card-text" style="color: #00A000;text-align: center">Hot LIne :+02 47110505</p>
 
 

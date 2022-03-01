@@ -95,6 +95,19 @@ class FrontendController extends Controller
         return view('frontend.pages.etender',$data);
 
     }
+    //Department-wise Doctor Search
+
+    public function DepartmentDoctor(){
+
+        $now=  date('Y-m-d');
+        $data['logo']=Logo::first();
+        $data['branches']=Branch::all();
+        $data['departments']=IbhDept::all();
+     /*   $data['dep_id']=IbhDept::orderBy('id','asc')->first()->id;*/
+        return view('frontend.pages.department-wise',$data);
+
+    }
+
     public function career(){
 
         $now=  date('Y-m-d'); $data['logo']=Logo::first();

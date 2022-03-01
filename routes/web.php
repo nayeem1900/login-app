@@ -33,6 +33,9 @@ use App\Http\Controllers\Backend\PasswordController;
 /*Route::get('/head',[FrontendController::class,'Head'])->name('index');*/
 Route::get('/',[FrontendController::class,'index'])->name('index');
 Route::get('/etender',[FrontendController::class,'etender'])->name('etender');
+//Doctor Search option
+Route::get('/department',[FrontendController::class,'DepartmentDoctor'])->name('department-doctor');
+
 Route::get('/hospital-info',[FrontendController::class,'hospitalinfo'])->name('hospital-info');
 Route::get('/career',[FrontendController::class,'career'])->name('career');
 Route::get('/jakat',[FrontendController::class,'jakat'])->name('jakat');
@@ -40,6 +43,7 @@ Route::get('/contact',[FrontendController::class,'contact'])->name('contact');
 //ajax doctor call
 Route::get('ibchkdoctor/ajax',[IbchkConrtoller::class,'getIbchDoctor'])->name('ajax-doctor');
 Route::get('finddoctor/ajax',[IbchkConrtoller::class,'findDoctor'])->name('ajax-find-doctor');
+Route::post('finddoctor/department/ajax',[IbchkConrtoller::class,'findDoctorDepartment'])->name('ajax-find-doctor-department');
 //end
 Route::get('/foundation_committee',[FrontendController::class,'foundationcommittee'])->name('foundationcommittee');
 Route::get('/at_glance',[FrontendController::class,'atglance'])->name('atglance');

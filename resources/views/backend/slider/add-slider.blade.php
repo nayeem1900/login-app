@@ -51,6 +51,16 @@
                                     @csrf
                                     @include('backend.layouts.message')
 
+                                    <div class="col-md-4">
+                                        <label>Slider Header Name  <font style="color: red">*</font></label>
+                                        <input type="text" name="h_name" value="" class="form-control form-control-sm"id="h_name">
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Slider Long Name  <font style="color: red">*</font></label>
+                                        <input type="text" name="p_name" value="" class="form-control form-control-sm"id="p_name">
+
+                                    </div>
 
 
                                     <div class="form-group row">
