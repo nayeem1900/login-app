@@ -186,5 +186,23 @@ public function ibchkdoctorupdate(Request $request,$id){
 
     }
 
+    public function findDoctorBranch(Request $request){
+        $doctors = IbhDoctor::where('branch_id', $request->branch_id)->get();
+
+        return view("frontend.pages.filter-branch-doctor", compact('doctors'))->render();
+
+
+
+    }
+//Doctor Search By Name
+    public function findDoctorName($name){
+        $doctor_name=IbhDoctor::where("doctor_name", "LIKE", "%".$name."%")->get();
+
+
+        return view("frontend.pages.filter-name-doctor", compact('doctor_name'))->render();
+
+
+    }
+
 
 }

@@ -35,7 +35,9 @@ Route::get('/',[FrontendController::class,'index'])->name('index');
 Route::get('/etender',[FrontendController::class,'etender'])->name('etender');
 //Doctor Search option
 Route::get('/department',[FrontendController::class,'DepartmentDoctor'])->name('department-doctor');
-
+Route::get('find-doctor-branch/',[FrontendController::class,'BranchFindDoctor'])->name('find-doctor-branch');
+Route::get('find-doctor-name/',[FrontendController::class,'NameFindDoctor'])->name('find-doctor-name');
+//end
 Route::get('/hospital-info',[FrontendController::class,'hospitalinfo'])->name('hospital-info');
 Route::get('/career',[FrontendController::class,'career'])->name('career');
 Route::get('/jakat',[FrontendController::class,'jakat'])->name('jakat');
@@ -44,6 +46,8 @@ Route::get('/contact',[FrontendController::class,'contact'])->name('contact');
 Route::get('ibchkdoctor/ajax',[IbchkConrtoller::class,'getIbchDoctor'])->name('ajax-doctor');
 Route::get('finddoctor/ajax',[IbchkConrtoller::class,'findDoctor'])->name('ajax-find-doctor');
 Route::post('finddoctor/department/ajax',[IbchkConrtoller::class,'findDoctorDepartment'])->name('ajax-find-doctor-department');
+Route::post('finddoctor/branch/ajax',[IbchkConrtoller::class,'findDoctorBranch'])->name('ajax-find-doctor-branch');
+Route::get('finddoctor/name/ajax/{name}',[IbchkConrtoller::class,'findDoctorName'])->name('ajax-find-doctor-name');
 //end
 Route::get('/foundation_committee',[FrontendController::class,'foundationcommittee'])->name('foundationcommittee');
 Route::get('/at_glance',[FrontendController::class,'atglance'])->name('atglance');
@@ -74,11 +78,12 @@ Route::get('dep-doctor/',[FrontendController::class,'motijheel'])->name('motijhe
 Route::get('ibh_mugdha',[FrontendController::class,'mugdha'])->name('mugdha');
 //Barisal
 Route::get('barisal',[FrontendController::class,'barisal'])->name('barisal');
-
+//Khulna
+Route::get('khulna',[FrontendController::class,'khulna'])->name('khulna');
 //Nayapaltan
 Route::get('ibh_paltan',[FrontendController::class,'Paltan'])->name('paltan');
 //Find Doctor
-Route::get('find-doctor/',[FrontendController::class,'Finddoctor'])->name('find-doctor');
+
 Route::get('find-doctor1/{id}',[FrontendController::class,'Finddoctor1'])->name('find-doctor1');
 /*Route::get('branch/head/{id}',[FrontendController::class,'Head'])->name('head');*/
 

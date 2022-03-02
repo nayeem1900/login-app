@@ -58,7 +58,7 @@
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Mirpur</a></li>
                                 <li><a class="dropdown-item" href="{{route('mugdha')}}">Islami Bank Hospital Mughda</a></li>
                                 <li><a class="dropdown-item" href="{{route('paltan')}}">Islami Bank Specialized & General Hospital, Nayapaltan</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Khulna</a></li>
+                                <li><a class="dropdown-item" href="{{route('khulna')}}">Islami Bank Hospital Khulna</a></li>
                                 <li><a class="dropdown-item" href="{{route('barisal')}}">Islami Bank Hospital Barisal</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Chattogram</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Luxmipur, Rajshahi</a></li>
@@ -108,8 +108,8 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li ><a class="dropdown-item" style="color: black" href="{{route('department-doctor')}}">Department wise</a></li>
-                                <li><a class="dropdown-item" href="">Branch wise</a></li>
-                                <li><a class="dropdown-item" href="">Name wise</a></li>
+                                <li><a class="dropdown-item" href="{{route('find-doctor-branch')}}">Branch wise</a></li>
+                                <li><a class="dropdown-item" href="{{route('find-doctor-name')}}">Name wise</a></li>
 
 
                             </ul>
@@ -131,7 +131,7 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="finddoctorId" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Find Doctor
+                                our units
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @foreach($branches as $branch)

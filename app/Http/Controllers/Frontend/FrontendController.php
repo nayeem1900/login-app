@@ -108,6 +108,23 @@ class FrontendController extends Controller
 
     }
 
+    public function BranchFindDoctor(){
+        $data['logo']=Logo::first();
+        $data['branches']=Branch::all();
+        $data['departments']=IbhDept::all();
+
+        return view('frontend.pages.branchwise_doctor',$data);
+    }
+//Name-Wise Doctor Find
+public function NameFindDoctor(){
+
+    $data['logo']=Logo::first();
+    $data['branches']=Branch::all();
+    $data['departments']=IbhDept::all();
+
+    return view('frontend.pages.name_wise_doctor',$data);
+
+}
     public function career(){
 
         $now=  date('Y-m-d'); $data['logo']=Logo::first();
@@ -323,6 +340,23 @@ class FrontendController extends Controller
         return view('frontend.pages.barisal',$data);
     }
 
+    public function khulna(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','9')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 9);
+
+        return view('frontend.pages.ibh-khulna',$data);
+    }
+
+
     public function Finddoctor (){
 
         $data['branches']=Branch::all();
@@ -340,5 +374,7 @@ class FrontendController extends Controller
         return view('frontend.pages.finddoctor1',$data);
 
     }
+
+
 
 }
