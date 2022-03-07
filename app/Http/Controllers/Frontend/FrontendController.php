@@ -355,7 +355,205 @@ public function NameFindDoctor(){
 
         return view('frontend.pages.ibh-khulna',$data);
     }
+//Rajshahi  Luxmipur
 
+    public function IbhRajshahiLux(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','10')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 10);
+
+        return view('frontend.pages.ibh_rajshahi_luxmipur',$data);
+    }
+//Rajshahi  Nawdapara
+
+    public function IbhRajshahiNawdapara(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','11')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 11);
+
+        return view('frontend.pages.ibh-rajshahi-nawdapara',$data);
+    }
+
+    //Chottagram
+
+    public function IbhChottagram(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','12')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 12);
+
+        return view('frontend.pages.ibh-chottagram',$data);
+    }
+//Community Hospital Faridpur
+    public function IbchFaridpur(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','13')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 13);
+
+        return view('frontend.pages.ibch-faridpur',$data);
+    }
+
+//Community Hospital Rangpur
+    public function IbchRangpur(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','14')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 14);
+
+        return view('frontend.pages.ibch-rangpur',$data);
+    }
+//Community Hospital Dinajpur
+    public function IbchDinajpur(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','15')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 15);
+
+        return view('frontend.pages.ibch-dinajpur',$data);
+    }
+    //Community Hospital Naogaon
+    public function IbchNaogaon(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','16')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 16);
+
+        return view('frontend.pages.ibch-naogaon',$data);
+    }
+
+    //Community Hospital Jehnaidah
+    public function IbchJhenaidah(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','17')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 17);
+
+        return view('frontend.pages.ibch-Jhenaidah',$data);
+    }
+
+    //Community Hospital Manikgonj
+    public function IbchManikgonj(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','18')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 18);
+
+        return view('frontend.pages.ibch-manikgonj',$data);
+    }
+//Community Hospital Satkhera
+    public function IbchSatkhera(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','19')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 19);
+
+        return view('frontend.pages.ibch-satkhera',$data);
+    }
+    //Community Hospital Madaripur
+    public function IbchMadaripur(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','20')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 20);
+
+        return view('frontend.pages.ibch-madaripur',$data);
+    }
+    //Community Hospital Mymensingh
+    public function IbchMymensingh(){
+        $data['departments']=IbhDept::orderBy('name', 'ASC')->get();
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','21')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('ibh_depts.name','ASC')
+            ->get();
+
+        Session::put('branchId', 21);
+
+        return view('frontend.pages.ibch-mymensing',$data);
+    }
 
     public function Finddoctor (){
 

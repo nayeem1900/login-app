@@ -60,20 +60,20 @@
                                 <li><a class="dropdown-item" href="{{route('paltan')}}">Islami Bank Specialized & General Hospital, Nayapaltan</a></li>
                                 <li><a class="dropdown-item" href="{{route('khulna')}}">Islami Bank Hospital Khulna</a></li>
                                 <li><a class="dropdown-item" href="{{route('barisal')}}">Islami Bank Hospital Barisal</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Chattogram</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Luxmipur, Rajshahi</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Medical College Hospital,(Nawdapara)Rajshahi</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibh_chottagram')}}">Islami Bank Hospital Chattogram</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibh_rajshahi_luxmipur')}}">Islami Bank Hospital Luxmipur, Rajshahi</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibh_rajshahi_nawdapara')}}">Islami Bank Medical College Hospital,(Nawdapara)Rajshahi</a></li>
                                 <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Community Hospital</strong></li>
 
-                                <li><a class="dropdown-item" href="#">Islami Bank Community Hospital, Faridpur Ltd</a></li>
-                                <li><a class="dropdown-item" href="#">Islami Bank Community Hospital,Rangpur Ltd</a></li>
-                                <li><a class="dropdown-item" href="#">Islami Bank Community Hospital,Dinajpur Ltd</a></li>
-                                <li><a class="dropdown-item" href="#">Islami Bank Community Hospital,Naogoan Ltd</a></li>
-                                <li><a class="dropdown-item" href="#">Islami Bank Community Hospital,Jhenaidah Ltd</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Community Hospital,Manikgong Ltd</a></li>
-                                <li><a class="dropdown-item" href="#">Islami Bank Community Hospital,Sathkhira Ltd</a></li>
-                                <li><a class="dropdown-item" href="#">Islami Bank A.R Howlader Community Hospital,Madaripur Ltd</a></li>
-                                <li><a class="dropdown-item" href="#">Islami Bank Community Hospital,Mymensingh Ltd</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibch-faridpur')}}">Islami Bank Community Hospital, Faridpur Ltd</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibch-rangpur')}}">Islami Bank Community Hospital,Rangpur Ltd</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibch-dinajpur')}}">Islami Bank Community Hospital,Dinajpur Ltd</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibch-naogaon')}}">Islami Bank Community Hospital,Naogoan Ltd</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibch-jhenaidah')}}">Islami Bank Community Hospital,Jhenaidah Ltd</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibch-manikgonj')}}">Islami Bank Community Hospital,Manikgong Ltd</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibch-satkhera')}}">Islami Bank Community Hospital,Sathkhira Ltd</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibch-madaripur')}}">Islami Bank A.R Howlader Community Hospital,Madaripur Ltd</a></li>
+                                <li><a class="dropdown-item" href="{{route('ibch-mymensingh')}}">Islami Bank Community Hospital,Mymensingh Ltd</a></li>
 
                                 <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Health Education</strong></li>
 

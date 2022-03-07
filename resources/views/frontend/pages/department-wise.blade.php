@@ -77,11 +77,75 @@
 
                 });
 
-            })
+            });
 
+//reset branch
+
+            $(document).on('change','#branch_id',function() {
+
+               $('#ibh_doctor_id').prop('selectedIndex',0);
+                $('.replace_filter_data').html('');
+
+                /*$('#ibh_doctor_id').val('');*/
+                console.log('success')
+
+            });
 
 
     </script>
+
+
+
+
+{{--
+
+        <script type="text/javascript">
+
+
+            $(document).on('change','.dep_id',function() {
+                var ibh_doctor_id = $(this).val();
+                var branch_id = $("#branch_id").val();
+                var token = "{{ csrf_token() }}";
+                var url = "{{ route('ajax-find-doctor-department') }}";
+                $.ajax({
+
+                    type:"post",
+                    url: url,
+                    data:{
+                        branch_id: branch_id,
+                        dep_id: ibh_doctor_id,
+                        _token: token
+
+                    },
+                    success:function (res){
+
+                        $('.replace_filter_data').html(res);
+
+                        console.log(res);
+
+                    }
+
+
+                });
+
+            });
+
+            //reset branch
+
+            $(document).on('change','#branch_id',function() {
+
+                $('#ibh_doctor_id').prop('selectedIndex',0);
+                $('.replace_filter_data').html('');
+
+                /*$('#ibh_doctor_id').val('');*/
+                console.log('success')
+
+            });
+
+
+        </script>
+
+    --}}
 
 
 

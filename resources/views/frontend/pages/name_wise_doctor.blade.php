@@ -15,9 +15,10 @@
 
 
 
-<div class="replace_data">
+        <div class="row replace_data">
 
-</div>
+        </div>
+
         </div>
 
 

@@ -176,8 +176,11 @@ public function ibchkdoctorupdate(Request $request,$id){
        /* parant_table->join('child_table_name', "parant_table.child_table_id", '=', 'child_table_id')*/
 
 
-     $doctors = IbhDoctor::where('branch_id', $request->branch_id)->where('dep_id', $request->dep_id)->get();
+/*     $doctors = IbhDoctor::where('branch_id', $request->branch_id)->where('dep_id', $request->dep_id)->get();*/
 
+            $doctors = IbhDoctor::where('branch_id', $request->branch_id)->where('dep_id', $request->dep_id)->get();
+
+/*        $doctors = IbhDoctor::where('branch_id', $request->branch_id)->where('dep_id', $request->dep_id)->whereNOTNull('doctor_name')->get();*/
         return view("frontend.pages.filter-doctor", compact('doctors'))->render();
 
 //            $branch_id=$request->branch_id;

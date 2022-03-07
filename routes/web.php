@@ -82,6 +82,31 @@ Route::get('barisal',[FrontendController::class,'barisal'])->name('barisal');
 Route::get('khulna',[FrontendController::class,'khulna'])->name('khulna');
 //Nayapaltan
 Route::get('ibh_paltan',[FrontendController::class,'Paltan'])->name('paltan');
+//Rajshahi Luxmipur
+Route::get('ibh_rajshahi_luxmipur',[FrontendController::class,'IbhRajshahiLux'])->name('ibh_rajshahi_luxmipur');
+//Rajshahi Nawdapara
+Route::get('ibh_rajshahi_nawdapara',[FrontendController::class,'IbhRajshahiNawdapara'])->name('ibh_rajshahi_nawdapara');
+//Chattogram
+Route::get('ibh_chottagram',[FrontendController::class,'IbhChottagram'])->name('ibh_chottagram');
+///Community Hospital
+//Faridpur
+Route::get('ibch-faridpur',[FrontendController::class,'IbchFaridpur'])->name('ibch-faridpur');
+//Rangpur
+Route::get('ibch-rangpur',[FrontendController::class,'IbchRangpur'])->name('ibch-rangpur');
+//Dinajpur
+Route::get('ibch-dinajpur',[FrontendController::class,'IbchDinajpur'])->name('ibch-dinajpur');
+//Naogaon
+Route::get('ibch-naogaon',[FrontendController::class,'IbchNaogaon'])->name('ibch-naogaon');
+//Jhenaidah
+Route::get('ibch-jhenaidah',[FrontendController::class,'IbchJhenaidah'])->name('ibch-jhenaidah');
+//Manikgonj
+Route::get('ibch-manikgonj',[FrontendController::class,'IbchManikgonj'])->name('ibch-manikgonj');
+//Satkhera
+Route::get('ibch-satkhera',[FrontendController::class,'IbchSatkhera'])->name('ibch-satkhera');
+//Madaripur
+Route::get('ibch-madaripur',[FrontendController::class,'IbchMadaripur'])->name('ibch-madaripur');
+//Mymensingh
+Route::get('ibch-mymensingh',[FrontendController::class,'IbchMymensingh'])->name('ibch-mymensingh');
 //Find Doctor
 
 Route::get('find-doctor1/{id}',[FrontendController::class,'Finddoctor1'])->name('find-doctor1');
