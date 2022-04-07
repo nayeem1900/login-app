@@ -112,6 +112,10 @@ Route::get('ibch-mymensingh',[FrontendController::class,'IbchMymensingh'])->name
 Route::get('find-doctor1/{id}',[FrontendController::class,'Finddoctor1'])->name('find-doctor1');
 /*Route::get('branch/head/{id}',[FrontendController::class,'Head'])->name('head');*/
 
+
+//Islami Bank Institute of Science & Technology
+Route::get('ibit/dhaka',[FrontendController::class,'IbitDhaka'])->name('ibit-dhaka');
+
 /*Route::get('/', function () {
     return view('welcome');
 });*/

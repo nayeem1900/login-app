@@ -575,4 +575,13 @@ public function NameFindDoctor(){
 
 
 
+//Islami Bank Insitute of Technology
+
+    public function IbitDhaka(){
+        $data['logo']=Logo::first();
+        $data['branches']= Branch::all();
+        return view('frontend.pages.ibit-dhaka',$data);
+    }
+
+
 }

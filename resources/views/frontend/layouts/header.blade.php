@@ -87,12 +87,12 @@
                                 <li><a class="dropdown-item" href="#">Islami Bank Model School & College</a></li>
 
                                 <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Technical Education</strong></li>
-
+                                <li><a class="dropdown-item" href="{{route('ibit-dhaka')}}">Islami Bank Institute of Technology,Dhaka</a></li>
                                 <li><a class="dropdown-item" href="http://ibitsylhet.edu.bd/">Islami Bank Institute of Technology,Sylhet</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Bogura</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Chattogram</a></li>
                                 <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Savar</a></li>
-                                <li><a class="dropdown-item" href="#">Islami Bank Institute of Technology,Dhaka</a></li>
+
 
 
                             </ul>
@@ -146,13 +146,15 @@
 
                     </ul>
 
-                </div>  
+                </div>
+
             </div>
+
         </nav>
 
 
+</div>
 
-    </div>
 
 
 
