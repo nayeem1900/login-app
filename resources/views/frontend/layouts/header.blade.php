@@ -57,11 +57,12 @@
 
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Mirpur</a></li>
                                 <li><a class="dropdown-item" href="{{route('mugdha')}}">Islami Bank Hospital Mughda</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Spetalize Hospital,Nayapalton</a></li>
+                                <li><a class="dropdown-item" href="{{route('paltan')}}">Islami Bank Specialized & General Hospital, Nayapaltan</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Khulna</a></li>
                                 <li><a class="dropdown-item" href="">Islami Bank Hospital Barishal</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Chottogram</a></li>
-                                <li><a class="dropdown-item" href="">Islami Bank Hospital Luxmipur,Rajshahi</a></li>
+                                <li><a class="dropdown-item" href="">Islami Bank Hospital Chattogram</a></li>
+                                <li><a class="dropdown-item" href="">Islami Bank Hospital Luxmipur, Rajshahi</a></li>
+                                <li><a class="dropdown-item" href="">Islami Bank Medical College Hospital,(Nawdapara)Rajshahi</a></li>
                                 <li style="background: green"><hr class="dropdown-divider"><strong style="color: white">Community Hospital</strong></li>
 
                                 <li><a class="dropdown-item" href="#">Islami Bank Community Hospital, Faridpur Ltd</a></li>

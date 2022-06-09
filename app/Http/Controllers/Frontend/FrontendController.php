@@ -269,5 +269,22 @@ class FrontendController extends Controller
         return view('frontend.pages.ibh_mugdha',$data);
     }
 
+    public function Paltan(){
+        $data['departments']=IbhDept::all();
+        $data['logo']=Logo::first();
+
+        $data['doctor']=IbhDoctor::join('branches','ibh_doctors.branch_id','=','branches.id')
+            ->join('ibh_depts','ibh_doctors.dep_id','=','ibh_depts.id')
+            ->where('branch_id','8')
+            ->select('ibh_doctors.*','branches.name','ibh_depts.name')
+            ->orderBy('dep_id','DESC')
+            ->get();
+
+        Session::put('branchId', 8);
+
+        return view('frontend.pages.naya_paltan',$data);
+    }
+
+
 
 }

@@ -314,7 +314,124 @@ $route=Route::current()->getName();
         </li>
         @endisset
 
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Suppliers
+                    <i class="fas fa-angle-left right"></i>
 
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('suppliers.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Supplier View</p>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    Customer
+                    <i class="fas fa-angle-left right"></i>
+
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('customers.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Customer View</p>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    Units
+                    <i class="fas fa-angle-left right"></i>
+
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('units.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>View Units</p>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    Categories
+                    <i class="fas fa-angle-left right"></i>
+
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('categories.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>View Category</p>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    Products
+                    <i class="fas fa-angle-left right"></i>
+
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('products.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>View Product</p>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    Purchase
+                    <i class="fas fa-angle-left right"></i>
+
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('purchases.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>View Purchase</p>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
 
     </ul>
 </nav>

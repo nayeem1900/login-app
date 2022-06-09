@@ -241,17 +241,16 @@ $(function(){
 <script src="{{asset('backend/admin_panel/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
 <script src="{{asset('backend/admin_panel/plugins/jquery-validation/additional-methods.min.js')}}"></script>
 {{-- handlebars--}}
-<script src="{{asset('backend/js/handlebars.min-v4.7.6.js')}}"></script>
-{{-- Notyfy JS--}}
-<script src="{{asset('backend/js/notify.min.js')}}"></script>
 
-<script src="js/jquery.min.js" type="text/javascript"></script>
+{{-- Notyfy JS--}}
+<script type="text/javascript" src="{{asset('backend/js/notify.min.js')}}"></script>
+{{--<script src="{{asset('backend/js/jquery-2.2.4.min.js')}}"></script>--}}
 <script src="js/jquery-ui.min.js" type="text/javascript"></script>
 
 <script src="js/trirand/i18n/grid.locale-en.js" type="text/javascript"></script>
 <script src="js/trirand/jquery.jqGrid.min.js" type="text/javascript"></script>
 
-
+<script type="text/javascript" src="{{asset('backend/js/handlebars.min.js')}}"></script>
 
 
 <script>
