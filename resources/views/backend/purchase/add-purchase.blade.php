@@ -55,20 +55,20 @@
 
                                         <div class="col-md-4">
                                             <label>Date</label>
-                                            <input type="date" name="date" class="form-control " id="date" placeholder="YYYY-MM-DD">
+                                            <input type="date" name="date" class="form-control form-control-sm " id="date" placeholder="YYYY-MM-DD">
 
                                         </div>
                                         <div class="col-md-4">
                                             <label>Purchase NO</label>
-                                            <input type="text" name="purchase_no" class="form-control" id="purchase_no">
+                                            <input type="text" name="purchase_no" class="form-control form-control-sm" id="purchase_no">
 
                                         </div>
 
 
 
                                         <div class="col-md-4">
-                                            <label>Supplier Name  <font style="color: red">*</font></label>
-                                            <select name="supplier_id" class="form-control" id="supplier_id">
+                                            <label>Supplier Name </label>
+                                            <select name="supplier_id" class="form-control select2" id="supplier_id">
                                                 <option value="">Select Supplier</option>
                                                 @foreach($suppliers as $supplier)
                                                     <option value="{{$supplier->id}}" {{@$editData->$supplier_id==$supplier->id?"selected":''}}>{{$supplier->name}}</option>
@@ -79,7 +79,7 @@
 
                                         <div class="col-md-4">
                                             <label>Category Name  <font style="color: red">*</font></label>
-                                            <select name="category_id" class="form-control"id="category_id">
+                                            <select name="category_id" class="form-control select2" id="category_id">
                                                 <option value="">Select Category</option>
                                             </select>
 
@@ -87,7 +87,7 @@
 
                                         <div class="col-md-6">
                                             <label>Product Name </label>
-                                            <select name="product_id" class="form-control"id="product_id">
+                                            <select name="product_id" class="form-control select2" id="product_id">
                                                 <option value="">Select Product</option>
                                             </select>
 
@@ -168,6 +168,7 @@
         </section>
         <!-- /.content -->
     </div>
+
 
 
 <script id = "document-template" type="text/x-handlebars-template">

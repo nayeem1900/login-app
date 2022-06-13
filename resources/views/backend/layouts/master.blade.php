@@ -35,14 +35,16 @@
     <link rel="stylesheet" href="{{asset('backene/admin_panel/plugins/daterangepicker/daterangepicker.css')}}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{asset('backend/admin_panel/plugins/summernote/summernote-bs4.css')}}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    {{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">--}}
     <script src="{{asset('backend/admin_panel/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!--sweetalert --->
     <script src="{{asset('backend/sweetalert/sweetalert.js')}}"></script>
     <link href="{{asset('backend/sweetalert/sweetalert.cs')}}" rel="stylesheet" type="text/css">
-
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{asset('backend/admin_panel/plugins/select2/css/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/admin_panel/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/trirand/ui.jqgrid.css" />
@@ -188,8 +190,9 @@ $(function(){
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery -->
 
+<!-- jQuery -->
+<script src="{{asset('backend/admin_panel/plugins/jquery/jquery.min.js')}}"></script>
 
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js"></script>--}}
 
@@ -201,7 +204,6 @@ $(function(){
 </script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('backend/admin_panel/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
 <!-- DataTables -->
 <script src="{{asset('backend/admin_panel/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('backend/admin_panel/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
@@ -236,12 +238,12 @@ $(function(){
 <script src="{{asset('backend/admin_panel/dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('backend/admin_panel/dist/js/demo.js')}}"></script>
-
 <!-- jquery-validation -->
 <script src="{{asset('backend/admin_panel/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
 <script src="{{asset('backend/admin_panel/plugins/jquery-validation/additional-methods.min.js')}}"></script>
+<!-- Select2 -->
+<script src="{{asset('backend/admin_panel/plugins/select2/js/select2.full.min.js')}}"></script>
 {{-- handlebars--}}
-
 {{-- Notyfy JS--}}
 <script type="text/javascript" src="{{asset('backend/js/notify.min.js')}}"></script>
 {{--<script src="{{asset('backend/js/jquery-2.2.4.min.js')}}"></script>--}}
@@ -251,6 +253,14 @@ $(function(){
 <script src="js/trirand/jquery.jqGrid.min.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="{{asset('backend/js/handlebars.min.js')}}"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $('.select2').select2()
+    })
+
+</script>
+
 
 
 <script>
@@ -295,6 +305,8 @@ reader.readAsDataURL(e.target.files['0']);
 <script type="text/javascript">
 
     $(function(){
+
+
         $('.singledatepicker').daterangepicker({
             singleDatePicker: true,
             showDropdowns: true,
@@ -325,7 +337,7 @@ reader.readAsDataURL(e.target.files['0']);
     });
 </script>
 
-<script type="text/javascript">
+{{--<script type="text/javascript">
     $(document).ready(function () {
 
         $(document).on('click', '#delete', function () {
@@ -385,7 +397,9 @@ reader.readAsDataURL(e.target.files['0']);
         });
     });
 
-</script>
+</script>--}}
+
+
 
 
 </body>

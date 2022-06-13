@@ -62,14 +62,16 @@
                                         <tr>
                                             <td>{{$key+1}}</td>
                                             <td>{{($value->name)}}</td>
-
+                                            @php
+                                                $count_category =App\Models\Product::where('unit_id',$value->id)->count();
+                                            @endphp
 
 
                                             <td>
 
                                                 <a title="Edit" class="btn btn-sm btn-primary" href="{{route('categories.edit',$value->id)}}"><i class="fa fa-edit"></i></a>
 
-
+                                                @if($count_category<1)
                                                 <a href="#deleteModal{{$value->id}}" data-toggle="modal" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
 
                                                 <!-- Modal -->
@@ -99,7 +101,7 @@
                                                     </div>
                                                 </div>
 
-
+                                            @endif
 
                                             </td>
 

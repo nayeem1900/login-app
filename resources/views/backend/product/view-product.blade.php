@@ -67,12 +67,14 @@
                                             <td>{{$value['category']['name']}}</td>
                                             <td>{{($value->name)}}</td>
                                             <td>{{$value['unit']['name']}}</td>
-
+                                            @php
+                                                $count_product =App\Models\Purchase::where('product_id',$value->id)->count();
+                                            @endphp
                                             <td>
 
                                                 <a title="Edit" class="btn btn-sm btn-primary" href="{{route('products.edit',$value->id)}}"><i class="fa fa-edit"></i></a>
 
-
+                                                @if($count_product<1)
                                                 <a href="#deleteModal{{$value->id}}" data-toggle="modal" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
 
                                                 <!-- Modal -->
@@ -101,7 +103,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
+                                                @endif
 
 
                                             </td>

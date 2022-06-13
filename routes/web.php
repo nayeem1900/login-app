@@ -302,8 +302,8 @@ Route::group(['prefix'=>'purchases','middleware'=>['admin','auth']],function () 
     Route::get('/view',[PurchaseController::class,'view'])->name('purchases.view');
     Route::get('/add',[PurchaseController::class,'add'])->name('purchases.add');
     Route::post('store',[PurchaseController::class,'store'])->name('purchases.store');
-    Route::get('/edit/{id}',[PurchaseController::class,'edit'])->name('purchases.edit');
-    Route::post('/update/{id}',[PurchaseController::class,'update'])->name('purchases.update');
+    Route::get('/pending',[PurchaseController::class,'pendingList'])->name('purchases.pending.list');
+    Route::post('/approve/{id}',[PurchaseController::class,'approve'])->name('purchases.approve');
     Route::post('/delete/{id}',[PurchaseController::class,'delete'])->name('purchases.delete');
 
 });

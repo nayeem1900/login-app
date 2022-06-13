@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\Purchase;
 use App\Models\Supplier;
 use App\Models\Unit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PurchaseController extends Controller
 {
@@ -59,10 +61,36 @@ class PurchaseController extends Controller
 
         }
 
-        return redirect()->route('purchases.view')->with('success','Data Delete Successfully');
+        return redirect()->route('purchases.view')->with('success','Data Store Successfully');
 
     }
+    public function delete($id){
+        $purchase=Purchase::find($id);
+        $purchase->delete();
+        return redirect()->route('purchases.view')->with('success','Data Delete Successfully');
+    }
+public function pendingList(){
 
+    $data['allData']=Purchase::orderBy('date','desc')->orderBy('id','desc')->where('status','0')->get();
 
+    return view('backend.purchase.view-pending-list',$data);
+
+}
+public function approve($id)
+{
+
+    $purchase =Purchase::find($id);
+    $product =Product::where('id',$purchase->product_id)->first();
+    $purchase_qty =((float)($purchase->buying_qty))+((float)$product->quantity);
+    $product->quantity = $purchase_qty;
+    if($product->save()){
+
+        DB::table('purchases')
+            ->where('id', $id)
+            ->update(['status'=>1]);
+    }
+
+    return redirect()->route('purchases.pending.list')->with('success','Data Approved Successfully');
+}
 
 }
