@@ -62,7 +62,20 @@
                                             <font style="color:red">{{($errors->has('name'))?($errors->first('name')):''}}</font>
                                         </div>
                                     </div>
-
+                                    <div class="form-group row">
+                                        <label>Branch Address</label>
+                                        <div class="col-md-4">
+                                            <input type="text" name="address" value="{{@$editData->address}}" class="form-control"id="address">
+                                            <font style="color:red">{{($errors->has('address'))?($errors->first('address')):''}}</font>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label>Branch Contract NO</label>
+                                        <div class="col-md-4">
+                                            <input type="text" name="mobile" value="{{@$editData->mobile}}" class="form-control"id="mobile">
+                                            <font style="color:red">{{($errors->has('mobile'))?($errors->first('mobile')):''}}</font>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group row mb-0">
                                         <div class="col-md-4 offset-md-4">

@@ -37,20 +37,7 @@
 
                 </div>
 
-                <div class="card mb-3">
-
-                    <div class="col-md-4">
-                        <img src="{{url('frontend/images/1557393365_nazmul.jpg')}}" alt="...">
-                    </div>
-                    <div class="col-md-12">
-                        <div class="card-body ">
-                            <h5 class="card-title">Director</h5>
-                            <p class="card-text" style="text-align: justify">Professor Md. Nazmul Hassan is the Chairman of Board of Directors of Islami Bank Bangladesh Limited and he represents Armada Spinning Mills Limited as Director on the Bank’s Board. He is also the Chairman of the Islami Bank Foundation. Dr. Hassan started his career as a Lecturer in Dhaka University back in 1975. Then he completed his MS and Ph.D. with major in Agricultural Economics and Development Economics respectively. There after he was appointed as Professor, Institute of Nutrition and Food Science, University of Dhaka in 1993 and later held a faculty position at Brown University, USA. In addition, he held many important research and teaching positions throughout his long professional career of about forty-five years. He worked as Consultant at Cornell University, USA in its Food System Development Research and served on Ph.D. Committees there. He was also a Visiting Professor at the Royal Agricultural University, Denmark and a Consultant at the International Food Policy Research Institute and Academy for Educational Development, Washington DC. USA. In addition, he collaborated with few more Universities in USA including Yale,Harvard,U-Penn, Minnesota, and Ohio on matters of research and has over one hundred influential publications in peer reviewed outlets to his credit.</p>
-                            <p class="card-text"><small class="text-muted"></small></p>
-                        </div>
-                    </div>
-
-                </div>
+               
 
 
                 <div class="card mb-3">

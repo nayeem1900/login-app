@@ -18,17 +18,18 @@
                 <div class="card mb-3">
 
                     <div class="col-md-4">
-                        <img src="{{url('frontend/images/1557393365_nazmul.jpg')}}" alt="...">
+                        <img src="{{url('frontend/images/1490079412_kazisahidul.jpg')}}" alt="...">
                     </div>
                     <div class="col-md-12">
-                        <div class="card-body ">
+                        <div class="card-body">
                             <h5 class="card-title">Chairman</h5>
-                            <p class="card-text" style="text-align: justify">Professor Md. Nazmul Hassan is the Chairman of Board of Directors of Islami Bank Bangladesh Limited and he represents Armada Spinning Mills Limited as Director on the Bank’s Board. He is also the Chairman of the Islami Bank Foundation. Dr. Hassan started his career as a Lecturer in Dhaka University back in 1975. Then he completed his MS and Ph.D. with major in Agricultural Economics and Development Economics respectively. There after he was appointed as Professor, Institute of Nutrition and Food Science, University of Dhaka in 1993 and later held a faculty position at Brown University, USA. In addition, he held many important research and teaching positions throughout his long professional career of about forty-five years. He worked as Consultant at Cornell University, USA in its Food System Development Research and served on Ph.D. Committees there. He was also a Visiting Professor at the Royal Agricultural University, Denmark and a Consultant at the International Food Policy Research Institute and Academy for Educational Development, Washington DC. USA. In addition, he collaborated with few more Universities in USA including Yale,Harvard,U-Penn, Minnesota, and Ohio on matters of research and has over one hundred influential publications in peer reviewed outlets to his credit.</p>
-                            <p class="card-text"><small class="text-muted"></small></p>
+                            <p class="card-text"style="text-align: justify">Professor (Dr.) Qazi Shahidul Alam is a Director of Islami Bank Bangladesh Limited as the representative of Platinum Endeavors Limited. He is a well known Professor in Orthopedic Surgery in Bangladesh. He completed his MBBS from Dhaka Medical College in 1972, FICS in 1987 and MS of Orthopedic Surgery in 1980.</p>
+
                         </div>
                     </div>
 
                 </div>
+
                 <div class="card mb-3">
 
                     <div class="col-md-4">
@@ -43,21 +44,30 @@
                     </div>
 
                 </div>
-
                 <div class="card mb-3">
 
                     <div class="col-md-4">
-                        <img src="{{url('frontend/images/1490079412_kazisahidul.jpg')}}" alt="...">
+                        <img src="{{url('frontend/images/1566096456_Saleh Jahur.jpg')}}" alt="...">
                     </div>
                     <div class="col-md-12">
                         <div class="card-body">
                             <h5 class="card-title">Vice-Chairman</h5>
-                            <p class="card-text"style="text-align: justify">Professor (Dr.) Qazi Shahidul Alam is a Director of Islami Bank Bangladesh Limited as the representative of Platinum Endeavors Limited. He is a well known Professor in Orthopedic Surgery in Bangladesh. He completed his MBBS from Dhaka Medical College in 1972, FICS in 1987 and MS of Orthopedic Surgery in 1980.</p>
+                            <p class="card-text" style="text-align: justify">Professor Dr. Mohammad Saleh Jahur is an Independent Director of the Bank. He was a Professor of Accounting and Banking at University of Chittagong. He started his career as Lecturer in the Department of Finance in 1993. Before, joining the university, He worked at MIDAS (an NGO; now a financial institution) and Bangladesh Petroleum Corporation (an Autonomous Government Organization) as executive. He also completed BCS successfully but did not join.
 
+                                Dr Jahur completed all academic programs –SSC, HSC, B.Com (Hons.) in Accounting, and M.Com in Accounting with outstanding results. He did his Ph.D.on Lease Financing in Bangladesh Study of Policy and Performance under the joint supervision of Professor Dr S.P.Singh and Professor Dr. Manoj Anand in University Business School, Punjab, India under ICCR Scholarship of Government of India in 2000-2002. He did a diploma on Financial Reporting Standards and Assurance under the World Bank Scholarship at London, United Kingdom in 2008. He also studied on Green Productivity for Industry under the scholarship of METI, Japan in 2013. He also worked in Chartered Accountancy Firm for five months.
+
+                                He is a continuous researcher, working in the area of corporate finance, stock market and industrial productivity for many years. He has a good number articles published at home and abroad. He also participated many seminar and conference as paper presenter, discussant, and session chair at home and abroad. Besides, eleven students got awarded with M. Phil. and Ph.D. under his supervision from the University of Chittagong and about fourteen students are pursuing M. Phil. and Ph.D. at universities in Bangladesh and Malaysia under his supervision/Joint supervision at present.
+
+                                Mr. Jahur successfully implemented the projects titled "Grameen Bank and Socio-Economic Changes—A Study of Select Loanees" and “Higher Education Quality Enhancement Project“ awarded by German Cultural Center-Goethe institute, Dhaka, and University Grants Commission, World Bank & Government of the People’s Republic of Bangladesh respectively. Besides, he worked as Editor of Capital Market Journal-Vision and Academic Journal-of Faculty of Business Administration of University of Chittagong.
+
+                                Professor Jahur served as an Advisor to Chittagong Capital Limited-a Brokerage of Chittagong Stock Exchange, Bangladesh and GPH Ispat Limited for three years from 2009 to 2012. He worked as an Independent Director of GPH Ispat Limited for two terms (6 years) i. e. from 2012 to 2018. He has also been working as an Independent Director of Hakkani Pulp and Paper Mills Limited since September, 2017. He is a member of Chittagong Club Limited, Chittagong and Life Member at Ma O Shishu Hospital Limited, Chittagong & Chittagong Diabetics Association, Khulshi, Chittagong. Prof. Jahur has visited many countries and participated in many international seminars, symposiums & conferences. </p>
                         </div>
+
                     </div>
 
+
                 </div>
+
 
 
                 <div class="card mb-3">
@@ -129,29 +139,7 @@
 
                 </div>
 
-                <div class="card mb-3">
 
-                    <div class="col-md-4">
-                        <img src="{{url('frontend/images/1566096456_Saleh Jahur.jpg')}}" alt="...">
-                    </div>
-                    <div class="col-md-12">
-                        <div class="card-body">
-                            <h5 class="card-title">Member</h5>
-                            <p class="card-text" style="text-align: justify">Professor Dr. Mohammad Saleh Jahur is an Independent Director of the Bank. He was a Professor of Accounting and Banking at University of Chittagong. He started his career as Lecturer in the Department of Finance in 1993. Before, joining the university, He worked at MIDAS (an NGO; now a financial institution) and Bangladesh Petroleum Corporation (an Autonomous Government Organization) as executive. He also completed BCS successfully but did not join.
-
-                                Dr Jahur completed all academic programs –SSC, HSC, B.Com (Hons.) in Accounting, and M.Com in Accounting with outstanding results. He did his Ph.D.on Lease Financing in Bangladesh Study of Policy and Performance under the joint supervision of Professor Dr S.P.Singh and Professor Dr. Manoj Anand in University Business School, Punjab, India under ICCR Scholarship of Government of India in 2000-2002. He did a diploma on Financial Reporting Standards and Assurance under the World Bank Scholarship at London, United Kingdom in 2008. He also studied on Green Productivity for Industry under the scholarship of METI, Japan in 2013. He also worked in Chartered Accountancy Firm for five months.
-
-                                He is a continuous researcher, working in the area of corporate finance, stock market and industrial productivity for many years. He has a good number articles published at home and abroad. He also participated many seminar and conference as paper presenter, discussant, and session chair at home and abroad. Besides, eleven students got awarded with M. Phil. and Ph.D. under his supervision from the University of Chittagong and about fourteen students are pursuing M. Phil. and Ph.D. at universities in Bangladesh and Malaysia under his supervision/Joint supervision at present.
-
-                                Mr. Jahur successfully implemented the projects titled "Grameen Bank and Socio-Economic Changes—A Study of Select Loanees" and “Higher Education Quality Enhancement Project“ awarded by German Cultural Center-Goethe institute, Dhaka, and University Grants Commission, World Bank & Government of the People’s Republic of Bangladesh respectively. Besides, he worked as Editor of Capital Market Journal-Vision and Academic Journal-of Faculty of Business Administration of University of Chittagong.
-
-                                Professor Jahur served as an Advisor to Chittagong Capital Limited-a Brokerage of Chittagong Stock Exchange, Bangladesh and GPH Ispat Limited for three years from 2009 to 2012. He worked as an Independent Director of GPH Ispat Limited for two terms (6 years) i. e. from 2012 to 2018. He has also been working as an Independent Director of Hakkani Pulp and Paper Mills Limited since September, 2017. He is a member of Chittagong Club Limited, Chittagong and Life Member at Ma O Shishu Hospital Limited, Chittagong & Chittagong Diabetics Association, Khulshi, Chittagong. Prof. Jahur has visited many countries and participated in many international seminars, symposiums & conferences. </p>
-                        </div>
-
-                    </div>
-
-
-                </div>
                 <div class="card mb-3" >
 
                     <div class="col-md-4">
@@ -187,6 +175,27 @@
                     <div class="col-md-12">
                         <div class="card-body">
                             <h5 class="card-title">Member</h5>
+                            <p class="card-text" style="text-align: justify">Syed Abu Asad is a Director of Islami Bank Bangladesh Limited. He represents Excelsior Impex Company Limited in the Board of Directors of Islami Bank Bangladesh Limited. He has completed B. Com (Hons) & M. Com. (Finance) Degree from Dhaka University in 1980. Mr. Abu Asad was a brilliant student and stood 6th in S.S.C Commerce in Jashore Board. He is also a Diplomaed Associate of IBB.
+
+                                Abu Asad started his career in Banking Service in 1983 in Rupali Bank Limited as Senior Officer and served as Head of the Branch - many branches of local and overseas. He has also served as General Manager in Khulna Division, Local Office, Dhaka South and Head Office, Dhaka. He was awarded many appreciation letter, for achieving Deposit and Recovery Target, in Different Branches and Division. He was promoted to the post of Deputy Managing Director and posted at Sonali Bank Limited, Head Office, Dhaka. Lastly, he was promoted to the post of Managing Director and posted at Rajshahi Krishi Unnayan Bank. He has vast experience in Branch Banking, Foreign Exchange and Industrial Credit in Banking profession.
+
+                                Abu Asad visited various countries of the world participated in many seminars, workshops & training programmes at home and abroad such as Correspondent Banking in Thailand, Letter of Credit and UCP-500, E-Banking Workshop Training, Information Technology in Banking & Islami Banking and Finance in Pakistan. He is also engaged in various social, educational and cultural organizations of the country.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="card mb-3" >
+
+                    <div class="col-md-4">
+                        <img src="{{url('frontend/images/1610013074_monirul-mowla.jpg')}}" alt="...">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title">Member</h5>
                             <p class="card-text" style="text-align: justify">Mohammed Monirul Moula has been serving as the Managing Director & CEO of Islami Bank Bangladesh Limited since January 01, 2021. He has undergone a long banking career in multidimensional capacities since his joining in this Bank as Probationary Officer on March 06, 1986.
 
                                 During this long banking career, he served as the Additional Managing Director of the Bank with the responsibility as the Head of Corporate Investment Wing which included the Investment Risk Management of Islami Bank Bangladesh Limited for nearly 3 (three) years. Previously, he was the Head of Retail Investment Wing, comprising the affairs of SME Finance, Retail, Consumer & Real Estate Investment and Rural Development Scheme, the Head of Corporate Investment Division-II and the Head of Chittagong South Zone. He was also the Chairman of Investment Committee and the member of Management Committee (MANCOM), Asset Liability Committee(ALCO), and Committee for Recruitment & Promotion of the Bank.
@@ -196,6 +205,22 @@
                                 He was born in a noble Muslim family at Cox’s Bazar District in Bangladesh in 1963. He obtained Bachelor of Social Science (B.S.S) degree with Honours in 1983 and Masters of Social Science (M.S.S) in Economics in 1984 from the University of Chittagong. He is a Diplomaed Associate of the Institute of Bankers Bangladesh (DAIBB).
 
                                 He visited many countries like Thailand, Bahrain, Italy, Sri Lanka, KSA, Myanmar, Morocco, Malaysia, Indonesia, UAE & India for attending various conferences, seminars, trainings & business development programs. </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="card mb-3" >
+
+                    <div class="col-md-4">
+                        <img src="{{url('frontend/images/1610013074_monirul-mowla.jpg')}}" alt="...">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title">Executive Director</h5>
+                            <p class="card-text" style="text-align: justify"> </p>
                         </div>
 
                     </div>

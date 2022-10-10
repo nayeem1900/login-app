@@ -19,6 +19,7 @@ use App\Http\Controllers\Backend\AssigndoctorController;
 use App\Http\Controllers\Backend\DoctorregController;
 use App\Http\Controllers\Backend\DefaultController;
 use App\Http\Controllers\Backend\PasswordController;
+use App\Http\Controllers\Backend\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,7 @@ use App\Http\Controllers\Backend\PasswordController;
 /*Route::get('/head',[FrontendController::class,'Head'])->name('index');*/
 Route::get('/',[FrontendController::class,'index'])->name('index');
 Route::get('/etender',[FrontendController::class,'etender'])->name('etender');
+Route::get('/gallary',[FrontendController::class,'gallary'])->name('gallary');
 //Doctor Search option
 Route::get('/department',[FrontendController::class,'DepartmentDoctor'])->name('department-doctor');
 Route::get('find-doctor-branch/',[FrontendController::class,'BranchFindDoctor'])->name('find-doctor-branch');
@@ -171,6 +173,21 @@ Route::group(['prefix'=>'sliders','middleware'=>['admin','auth','permission']],f
 
 
 });
+//Gallery
+
+Route::group(['prefix'=>'gallerys','middleware'=>['admin','auth','permission']],function () {
+
+    Route::get('/view',[GalleryController::class,'view'])->name('gallerys.view');
+    Route::get('/add',[GalleryController::class,'add'])->name('gallerys.add');
+    Route::post('/store',[GalleryController::class,'store'])->name('gallerys.store');
+    Route::get('/edit/{id},',[GalleryController::class,'edit'])->name('gallerys.edit');
+    Route::post('/update/{id},',[GalleryController::class,'update'])->name('gallerys.update');
+    Route::post('/delete/{id},',[GalleryController::class,'delete'])->name('gallerys.delete');
+
+
+
+});
+
 //Etender
 Route::group(['prefix'=>'etenders','middleware'=>['admin','auth','permission']],function () {
 

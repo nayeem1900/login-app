@@ -5,7 +5,7 @@
     <li class="list-group-item"><a href="{{route('hospitalcommittee')}}">Hospital Committee</a></li>
     <li class="list-group-item"><a href="{{route('healtheducationcommittee')}}"> IBF Education,Health Education & Social Work Committee</a></li>
     <li class="list-group-item"><a href="{{route('communityhospitalboard')}}"> Community Hospital Board</a></li>
-    <li class="list-group-item"><a href="{{route('communityhospitalcommittee')}}"> Community Hospital Committee</a></li>
+    <li class="list-group-item"><a href="{{route('communityhospitalcommittee')}}"> Executive Committee of Islami Bank Community Hospitals</a></li>
     <li class="list-group-item"><a href="{{route('educationcommittee')}}">EC of Health Educational Institutes</a></li>
 
 </ul>

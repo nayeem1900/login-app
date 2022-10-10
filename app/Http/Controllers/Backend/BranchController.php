@@ -28,6 +28,9 @@ class BranchController extends Controller
 
         $data =new Branch();
         $data->name=$request->name;
+        $data->address=$request->address;
+        $data->mobile=$request->mobile;
+        $data->hotline=$request->hotline;
 
         $data->save();
         session()->flash('success',' Branch update success');
@@ -49,6 +52,8 @@ class BranchController extends Controller
 
 
         $data->name=$request->name;
+        $data->address=$request->address;
+        $data->mobile=$request->mobile;
 
         $data->save();
         session()->flash('success',' Branch update success');

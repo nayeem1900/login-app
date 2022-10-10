@@ -51,6 +51,8 @@
                                     <tr>
                                         <th>SL</th>
                                         <th>Branch Name</th>
+                                        <th>Branch Address</th>
+                                        <th>Branch Contract NO</th>
 
                                             <th>Action</th>
 
@@ -61,6 +63,8 @@
                                         <tr>
                                             <td>{{$key+1}}</td>
                                             <td>{{($value->name)}}</td>
+                                            <td>{{($value->address)}}</td>
+                                            <td>{{($value->mobile)}}</td>
 
                                                 <td>
                                                     @isset(auth()->user()->role->permission['permission']['branch']['edit'])

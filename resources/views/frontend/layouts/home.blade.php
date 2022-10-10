@@ -26,12 +26,12 @@
 
     <!--Middle-->
     <section class="middle">
-        <div class="container">
+       <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <a href="#" class="card-link"><h3>Education</h3></a>
 
-                    <p>If anyone travels on a road in search of knowledge, Allah will cause him to travel on one of the roads of Paradise.</p>
+                    <p style="text-align: justify">If anyone travels on a road in search of knowledge, Allah will cause him to travel on one of the roads of Paradise.</p>
                     <p class="text-end">"Holy Prophet".</p>
 
 
@@ -40,9 +40,9 @@
                 <div class="col-md-4">
                     <a href="#" class="card-link"><h3>Health</h3></a>
 
-                    <p>Seek your health fullness, for, besides the blessing of (unwavering) faith, man has not been granted a better gift"
+                    <p style="text-align: justify">Seek your health fullness, for, besides the blessing of (unwavering) faith, man has not been granted a better gift"
 
-                        Islami bank foundation established many health institutes all over the country.<a href="#" class="card-link"> readmore</a></p>
+                        Islami bank foundation established many health institutes all over the country.{{--<a href="#" class="card-link"> readmore</a>--}}</p>
 
 
                 </div>
@@ -50,13 +50,13 @@
                 <div class="col-md-4">
                     <a href="" class="card-link"><h3>Social Welfare</h3></a>
 
-                    <p>Islami Bank Foundation do many Social Welfare Activities.
-                        Some recent social welfare activities of Islami Bank Foundation are described here.<a href="" class="card-link"> readmore</a></p>
+                    <p style="text-align: justify">Islami Bank Foundation do many Social Welfare Activities.
+                        Some recent social welfare activities of Islami Bank Foundation are described here.</p>
 
                 </div>
 
             </div>
-        </div>
+       </div>
 
     </section>
 
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card" style="width: 18rem;color:whitesmoke;font-size: 20px;">
+                    <div class="card" style="color:whitesmoke;font-size: 20px;">
                         <div class="card-header">
                             Notice
                         </div>
@@ -80,20 +80,31 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card" style="width: 18rem;color:whitesmoke;font-size: 20px;">
-                        <div class="card-header">
+                    <div class="card" >
+                        <div class="card-header" style="color:whitesmoke;font-size: 20px;">
                             News & Events
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="{{route('hospital-info')}}">Hospital-Info</a> </li>
+                        <ul><a href="{{route('gallary')}}">
+                                <marquee behavior="scroll" direction="left">শুরু করছি আল্লাহর নামে যিনি পরম করুণাময়, অতি দয়ালু। </marquee> </a><br>
+                        dddddddddddd
                         </ul>
+
+                        <!-- Carousel wrapper -->
+
+                        <!-- Carousel wrapper -->
+                       {{-- <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="{{route('hospital-info')}}">Hospital-Info</a> </li>
+                            <li class="list-group-item"><a href="{{route('hospital-info')}}">Hospital-Info</a> </li>
+                            <li class="list-group-item"><a href="{{route('hospital-info')}}">Hospital-Info</a> </li>
+                            <li class="list-group-item"><a href="{{route('hospital-info')}}">Hospital-Info</a> </li>
+                        </ul>--}}
                     </div>
 
 
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card" style="width: 18rem;color:whitesmoke;font-size: 20px;">
+                    <div class="card" style="color:whitesmoke;font-size: 20px;">
                         <div class="card-header">
                             Links
                         </div>

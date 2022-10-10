@@ -1,5 +1,5 @@
 
-@extends('frontend.layouts.master')
+@extends('frontend.layouts.hospital_master')
 @section('content')
     <div class="container">
         <h2 style="text-align: center">Islami Bank Community Hospital,Faridpur. Hotline: 063166603,01990009929,01731848464</h2>

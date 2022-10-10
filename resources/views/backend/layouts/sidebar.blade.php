@@ -95,6 +95,17 @@ $route=Route::current()->getName();
 
 
             </ul>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('gallerys.view')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>View Gallery</p>
+                    </a>
+                </li>
+
+
+
+            </ul>
         </li>
 
         @endisset

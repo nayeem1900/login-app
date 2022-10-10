@@ -47,6 +47,7 @@ class FrontendController extends Controller
     }
     public function healtheducationcommittee(){
         $data['logo']=Logo::first();
+        $data['branches']=Branch::all();
         return view('frontend.pages.health_education_committee',$data);
     }
 
@@ -61,6 +62,7 @@ class FrontendController extends Controller
     }
 
     public function communityhospitalboard(){
+        $data['branches']=Branch::all();
         $data['logo']=Logo::first();
         return view('frontend.pages.community_hospital_board',$data);
     }
@@ -93,6 +95,15 @@ class FrontendController extends Controller
         $data['allData']=Etender::where('deadline', '>=',$now)->orderBy('id','desc')->get();
 
         return view('frontend.pages.etender',$data);
+
+    }
+    //Gallary
+
+    public function gallary(){
+
+        $data['logo']=Logo::first();
+        $data['branches']=Branch::all();
+        return view('frontend.pages.gallary',$data);
 
     }
     //Department-wise Doctor Search
@@ -139,6 +150,7 @@ public function NameFindDoctor(){
         return view('frontend.pages.jakat',$data);
     }
     public function contact(){
+        $data['branches']=Branch::all();
         $data['logo']=Logo::first();
         return view('frontend.pages.contact',$data);
     }
@@ -566,7 +578,9 @@ public function NameFindDoctor(){
     public function Finddoctor1 ($bracnId){
 
         $data['branches']= Branch::all();
-        $data['brancheData']= Branch::where('id', $bracnId)->first('name');
+        $data['hotline'] = Branch::where('id', $bracnId)->get();
+      $data['brancheData']= Branch::where('id', $bracnId)->first('name');
+        $data['branchContract']= Branch::where('id', $bracnId)->get();
         $data['logo']= Logo::first();
         $data['ibhdoctor'] = IbhDoctor::where('branch_id', $bracnId)->get();
         return view('frontend.pages.finddoctor1',$data);
