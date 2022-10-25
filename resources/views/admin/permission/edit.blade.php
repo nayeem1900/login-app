@@ -335,6 +335,38 @@
                                                     </td>
 
                                                 </tr>
+                                                //
+                                                <tr>
+                                                    <td>Galleries</td>
+                                                    <td>
+                                                        <input type="checkbox" name="permission[gallery][view]"
+                                                               @isset($permission['permission']['gallery']['view']) checked
+                                                               @endisset
+                                                               value="1">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="permission[gallery][add]"
+                                                               @isset($permission['permission']['gallery']['add']) checked
+                                                               @endisset
+                                                               value="1">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="permission[gallery][edit]"
+                                                               @isset($permission['permission']['gallery']['edit']) checked
+                                                               @endisset
+
+                                                               value="1">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="permission[gallery][delete]"
+                                                               @isset($permission['permission']['gallery']['delete']) checked
+                                                               @endisset
+                                                               value="1">
+                                                    </td>
+
+                                                </tr>
+
+                                                //
                                                 <tr>
                                                     <td>Permission</td>
                                                     <td>

@@ -36,7 +36,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3>Slider List
-                                    @isset(auth()->user()->role->permission['permission']['slider']['add'])
+                                    @isset(auth()->user()->role->permission['permission']['gallery']['add'])
                                     <a class="btn btn-success float-right btn-sm" href="{{route('gallerys.add')}}"><i class="fa fa-plus-circle"></i> Add Gallery</a>
                                     @endisset
                                 </h3>
@@ -50,7 +50,7 @@
                                     <tr>
                                         <th>SL</th>
                                         <th>Image</th>
-
+                                        <th>Image_Desc</th>
 
                                         <th>Action</th>
                                     </tr>
@@ -60,14 +60,13 @@
                                         <tr>
                                             <td>{{$key+1}}</td>
                                             <td><img src="{{(!empty($gallery->image))?url('upload/gallery/'.$gallery->image):url('upload/no_img.png')}}"style="width: 150px" height="160px"></td>
-                                            <td>{{$slider->h_name}}</td>
-                                            <td>{{$slider->p_name}}</td>
+                                            <td>{{($gallery->desc)}}</td>
                                             <td>
-                                                @isset(auth()->user()->role->permission['permission']['slider']['edit'])
-                                                <a title="Edit" class="btn btn-sm btn-primary" href="{{route('gallerys.edit',$slider->id)}}"><i class="fa fa-edit"></i></a>
+                                                @isset(auth()->user()->role->permission['permission']['gallery']['edit'])
+                                                <a title="Edit" class="btn btn-sm btn-primary" href="{{route('gallerys.edit',$gallery->id)}}"><i class="fa fa-edit"></i></a>
                                                 @endisset
                                                 {{-- <a title="Delete" class="btn btn-sm btn-danger" href="{{route('users.delete',$user->id)}}"><i class="fa fa-trash"></i></a>--}}
-                                                @isset(auth()->user()->role->permission['permission']['slider']['delete'])
+                                                @isset(auth()->user()->role->permission['permission']['gallery']['delete'])
                                                 <a href="#deleteModal{{$gallery->id}}" data-toggle="modal" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
 
                                                 <!-- Modal -->

@@ -7,6 +7,7 @@ use App\Models\AssignDoctor;
 use App\Models\Branch;
 use App\Models\Carrier;
 use App\Models\Etender;
+use App\Models\Gallery;
 use App\Models\Ibchk;
 use App\Models\IbchkDep;
 use App\Models\IbhDept;
@@ -101,9 +102,13 @@ class FrontendController extends Controller
 
     public function gallary(){
 
+
         $data['logo']=Logo::first();
         $data['branches']=Branch::all();
+        $data['gallaries']= collect(Gallery::all())->chunk(4);
+
         return view('frontend.pages.gallary',$data);
+
 
     }
     //Department-wise Doctor Search

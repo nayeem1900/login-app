@@ -92,9 +92,24 @@ $route=Route::current()->getName();
                     </a>
                 </li>
 
-
-
             </ul>
+
+        </li>
+
+        @endisset
+
+        @isset(auth()->user()->role->permission['permission']['gallery']['view'])
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    Manage Gallery
+                    <i class="fas fa-angle-left right"></i>
+
+                </p>
+            </a>
+
             <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="{{route('gallerys.view')}}" class="nav-link">
@@ -109,6 +124,8 @@ $route=Route::current()->getName();
         </li>
 
         @endisset
+
+
         @isset(auth()->user()->role->permission['permission']['etender']['view'])
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">

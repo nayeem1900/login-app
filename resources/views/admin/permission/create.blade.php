@@ -107,6 +107,25 @@
                                                   </td>
 
                                               </tr>
+                                              //
+                                              <tr>
+                                                  <td>Galleries</td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[gallery][view]" value="1">
+                                                  </td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[gallery][add]" value="1">
+                                                  </td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[gallery][edit]" value="1">
+                                                  </td>
+                                                  <td>
+                                                      <input type="checkbox" name="permission[gallery][delete]" value="1">
+                                                  </td>
+
+                                              </tr>
+
+                                              //
                                               <tr>
                                                   <td>Logos</td>
                                                   <td>

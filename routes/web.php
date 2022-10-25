@@ -184,8 +184,6 @@ Route::group(['prefix'=>'gallerys','middleware'=>['admin','auth','permission']],
     Route::post('/update/{id},',[GalleryController::class,'update'])->name('gallerys.update');
     Route::post('/delete/{id},',[GalleryController::class,'delete'])->name('gallerys.delete');
 
-
-
 });
 
 //Etender
